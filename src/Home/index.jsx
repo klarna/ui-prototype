@@ -1,23 +1,23 @@
 import React from 'react'
 import { PrimaryTitle, Paragraph } from '@klarna/ui-react-components/components/Text'
-import Field from '@klarna/ui-react-components/components/Field'
-import Button from '@klarna/ui-react-components/components/Button'
+import Link from '@klarna/ui-react-components/components/Link'
 import styles from './styles.css'
-import { submitForm } from '../actions'
 import { connect } from 'react-redux'
+import LinkList from '../LinkList'
 
-const Home = ({ error }) => (
+const Home = () => (
   <main className={styles.main}>
-    <PrimaryTitle>Home</PrimaryTitle>
+    <PrimaryTitle blue>Connect<br/ >your bank account</PrimaryTitle>
     <Paragraph>
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      Set up Klarna Direkt in seconds using your Mobilt BankID. You will only have to do this once.
+      <br />
+      <Link href='#'>Learn more</Link>
     </Paragraph>
-    <form onSubmit={(e) => { e.preventDefault(); submitForm(e.target.name.value) }}>
-      <fieldset className={styles.fieldset}>
-        <Field error={error} size='big' name='name' label='Name' />
-      </fieldset>
-      <Button>Send</Button>
-    </form>
+    <LinkList href='/open_bank_id' options={['Swedbank', 'Nordea', 'Handelsbanken', 'SEB', 'Other']} />
+    <br />
+    <Paragraph design='legal'>
+      När du klickar på Fortsätt godkänner du att Klarna hämtar och visar dina bankkontonummer, se vilkoren. Klarna lagrar bara det kontonummer du viljer och inga övriga bankuppgifter.
+    </Paragraph>
   </main>
 )
 

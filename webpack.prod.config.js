@@ -2,8 +2,6 @@
 const path = require('path')
 const WebpackErrorNotificationPlugin = require('webpack-error-notification')
 
-const DEV_SERVER_PORT = 7777
-
 module.exports = {
   cache: true,
 
@@ -53,13 +51,7 @@ module.exports = {
   },
 
   output: {
-    publicPath: `//localhost:${DEV_SERVER_PORT}/`,
+    publicPath: '/',
     filename: '[name].js'
   },
-
-  devServer: {
-    port: DEV_SERVER_PORT,
-    host: '0.0.0.0',
-    headers: { 'Access-Control-Allow-Origin': '*' }
-  }
 }

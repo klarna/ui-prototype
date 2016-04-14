@@ -1,0 +1,31 @@
+.main {
+}
+
+.button {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.title {
+  font-weight: 600;
+  color: #3C3C3E;
+}
+
+.address {
+  text-align: left;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+  position: relative;
+}
+
+.change {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.klarnaAddress {
+  text-align: left;
+}

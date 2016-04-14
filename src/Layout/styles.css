@@ -1,4 +1,12 @@
 .main {
   margin: 40px auto 0 auto;
-  width: 600px;
+  max-width: 455px;  /*415 + 20 * 2*/
+  padding: 20px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
