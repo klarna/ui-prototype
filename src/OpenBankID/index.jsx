@@ -13,7 +13,7 @@ export default () => (
     <Paragraph>
       We are about to fetch your bank account details so you don’t have to bother typing them.
     </Paragraph>
-    <a href='/ui-prototype/bank_accounts'>
+    <a href='#bank_accounts'>
       <Button className={styles.button}>
         Open Mobilt BankID
       </Button>

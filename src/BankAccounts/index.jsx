@@ -14,6 +14,6 @@ export default () => (
     <Paragraph>
       This will be the default bank account for your payments with Klarna.
     </Paragraph>
-    <LinkList href='/ui-prototype/review' options={['Privatkonto 123456789', 'Lonekonto 123456789']} />
+    <LinkList href='#review' options={['Privatkonto 123456789', 'Lonekonto 123456789']} />
   </main>
 )

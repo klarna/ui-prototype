@@ -22,7 +22,7 @@ export default () => (
     <Field label='Email' name='email' icon='email'>
       <Mail />
     </Field>
-    <a href='/ui-prototype/bank_accounts'>
+    <a href='#bank_accounts'>
       <Button size='big' className={styles.button}>
         Continue
       </Button>
