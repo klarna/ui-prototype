@@ -11,10 +11,10 @@ export default {
   component: Layout,
   indexRoute: { component: AllPages },
   childRoutes: [
-    { path: '/ui-prototype/home', component: Home },
-    { path: '/ui-prototype/open_bank_id', component: OpenBankID },
-    { path: '/ui-prototype/bank_accounts', component: BankAccounts },
-    { path: '/ui-prototype/review', component: Review },
-    { path: '/ui-prototype/user_details', component: Details }
+    { path: 'home', component: Home },
+    { path: 'open_bank_id', component: OpenBankID },
+    { path: 'bank_accounts', component: BankAccounts },
+    { path: 'review', component: Review },
+    { path: 'user_details', component: Details }
   ]
 }
