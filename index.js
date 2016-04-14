@@ -28185,7 +28185,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".j1Tj2flSHUc8lV5iz8PGa {\n  margin-top: 50px;\n}\n\n._206Emp63sVmA4mSoKn6y4Y {\n  margin-top: 15px;\n}\n", ""]);
+	exports.push([module.id, ".j1Tj2flSHUc8lV5iz8PGa {\n}\n\n._206Emp63sVmA4mSoKn6y4Y {\n  margin-top: 15px;\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
@@ -28346,7 +28346,7 @@
 	
 	
 	// module
-	exports.push([module.id, "._63OBNwNANRSLQict2Nbe8 {\n  margin-top: 50px;\n}\n\n._1PZSIiT2X0ZAp_9VJGmxia {\n  margin-top: 15px;\n}\n", ""]);
+	exports.push([module.id, "._63OBNwNANRSLQict2Nbe8 {\n}\n\n._1PZSIiT2X0ZAp_9VJGmxia {\n  margin-top: 15px;\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
@@ -28983,7 +28983,7 @@
 	
 	
 	// module
-	exports.push([module.id, "._2Ud-kFN-6WvQ5WFPYUeF83 {\n  margin-top: 50px;\n}\n\n._2zMXOpzp4mFx2FEmRgGpAb {\n  margin-top: 30px;\n  width: 100%;\n}\n", ""]);
+	exports.push([module.id, "._2Ud-kFN-6WvQ5WFPYUeF83 {\n}\n\n._2zMXOpzp4mFx2FEmRgGpAb {\n  margin-top: 30px;\n  width: 100%;\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
