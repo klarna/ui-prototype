@@ -1,22 +1,20 @@
 import Layout from './Layout'
 import Home from './Home'
 import OpenBankID from './OpenBankID'
-import OpenBankID2 from './OpenBankID2'
 import BankAccounts from './BankAccounts'
 import Review from './Review'
 import AllPages from './AllPages'
 import Details from './Details'
 
 export default {
-  path: '/ui-prototype/',
+  path: '/ui-prototype',
   component: Layout,
   indexRoute: { component: AllPages },
   childRoutes: [
-    { path: 'home', component: Home },
-    { path: 'open_bank_id', component: OpenBankID },
-    { path: 'open_bank_id2', component: OpenBankID2 },
-    { path: 'bank_accounts', component: BankAccounts },
-    { path: 'review', component: Review },
-    { path: 'user_details', component: Details }
+    { path: '/ui-prototype/home', component: Home },
+    { path: '/ui-prototype/open_bank_id', component: OpenBankID },
+    { path: '/ui-prototype/bank_accounts', component: BankAccounts },
+    { path: '/ui-prototype/review', component: Review },
+    { path: '/ui-prototype/user_details', component: Details }
   ]
 }

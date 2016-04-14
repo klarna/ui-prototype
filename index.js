@@ -64,7 +64,7 @@
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
-	var _store = __webpack_require__(302);
+	var _store = __webpack_require__(299);
 	
 	var _store2 = _interopRequireDefault(_store);
 	
@@ -27080,33 +27080,29 @@
 	
 	var _OpenBankID2 = _interopRequireDefault(_OpenBankID);
 	
-	var _OpenBankID3 = __webpack_require__(278);
-	
-	var _OpenBankID4 = _interopRequireDefault(_OpenBankID3);
-	
-	var _BankAccounts = __webpack_require__(281);
+	var _BankAccounts = __webpack_require__(278);
 	
 	var _BankAccounts2 = _interopRequireDefault(_BankAccounts);
 	
-	var _Review = __webpack_require__(285);
+	var _Review = __webpack_require__(282);
 	
 	var _Review2 = _interopRequireDefault(_Review);
 	
-	var _AllPages = __webpack_require__(288);
+	var _AllPages = __webpack_require__(285);
 	
 	var _AllPages2 = _interopRequireDefault(_AllPages);
 	
-	var _Details = __webpack_require__(291);
+	var _Details = __webpack_require__(288);
 	
 	var _Details2 = _interopRequireDefault(_Details);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
-	  path: '/ui-prototype/',
+	  path: '/ui-prototype',
 	  component: _Layout2.default,
 	  indexRoute: { component: _AllPages2.default },
-	  childRoutes: [{ path: 'home', component: _Home2.default }, { path: 'open_bank_id', component: _OpenBankID2.default }, { path: 'open_bank_id2', component: _OpenBankID4.default }, { path: 'bank_accounts', component: _BankAccounts2.default }, { path: 'review', component: _Review2.default }, { path: 'user_details', component: _Details2.default }]
+	  childRoutes: [{ path: '/ui-prototype/home', component: _Home2.default }, { path: '/ui-prototype/open_bank_id', component: _OpenBankID2.default }, { path: '/ui-prototype/bank_accounts', component: _BankAccounts2.default }, { path: '/ui-prototype/review', component: _Review2.default }, { path: '/ui-prototype/user_details', component: _Details2.default }]
 	};
 
 /***/ },
@@ -28284,9 +28280,13 @@
 	
 	var _styles2 = _interopRequireDefault(_styles);
 	
-	var _BankID = __webpack_require__(277);
+	var _Bank = __webpack_require__(281);
 	
-	var _BankID2 = _interopRequireDefault(_BankID);
+	var _Bank2 = _interopRequireDefault(_Bank);
+	
+	var _LinkList = __webpack_require__(264);
+	
+	var _LinkList2 = _interopRequireDefault(_LinkList);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -28294,28 +28294,20 @@
 	  return _react2.default.createElement(
 	    'main',
 	    { className: _styles2.default.main },
-	    _react2.default.createElement(_BankID2.default, null),
+	    _react2.default.createElement(_Bank2.default, null),
 	    _react2.default.createElement(
 	      _Text.PrimaryTitle,
 	      { blue: true },
-	      'Open your',
+	      'Choose what',
 	      _react2.default.createElement('br', null),
-	      'Mobilt BandID app'
+	      'bank account to connect'
 	    ),
 	    _react2.default.createElement(
 	      _Text.Paragraph,
 	      null,
-	      'We are about to fetch your bank account details so you don’t have to bother typing them.'
+	      'This will be the default bank account for your payments with Klarna.'
 	    ),
-	    _react2.default.createElement(
-	      'a',
-	      { href: '/bank_accounts' },
-	      _react2.default.createElement(
-	        _Button2.default,
-	        { className: _styles2.default.button },
-	        'Open Mobilt BankID'
-	      )
-	    )
+	    _react2.default.createElement(_LinkList2.default, { href: '/review', options: ['Privatkonto 123456789', 'Lonekonto 123456789'] })
 	  );
 	};
 
@@ -28354,104 +28346,6 @@
 	
 	
 	// module
-	exports.push([module.id, "._3re6-YsfOQhpk1F33UPSIc {\n  margin-top: 50px;\n}\n\n._1ZIxaHDHhNX1nwQVrP4Bd2 {\n  margin-top: 15px;\n}\n", ""]);
-	
-	// exports
-	exports.locals = {
-		"main": "_3re6-YsfOQhpk1F33UPSIc",
-		"button": "_1ZIxaHDHhNX1nwQVrP4Bd2"
-	};
-
-/***/ },
-/* 281 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(5);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _Text = __webpack_require__(255);
-	
-	var _Button = __webpack_require__(268);
-	
-	var _Button2 = _interopRequireDefault(_Button);
-	
-	var _styles = __webpack_require__(282);
-	
-	var _styles2 = _interopRequireDefault(_styles);
-	
-	var _Bank = __webpack_require__(284);
-	
-	var _Bank2 = _interopRequireDefault(_Bank);
-	
-	var _LinkList = __webpack_require__(264);
-	
-	var _LinkList2 = _interopRequireDefault(_LinkList);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	exports.default = function () {
-	  return _react2.default.createElement(
-	    'main',
-	    { className: _styles2.default.main },
-	    _react2.default.createElement(_Bank2.default, null),
-	    _react2.default.createElement(
-	      _Text.PrimaryTitle,
-	      { blue: true },
-	      'Choose what',
-	      _react2.default.createElement('br', null),
-	      'bank account to connect'
-	    ),
-	    _react2.default.createElement(
-	      _Text.Paragraph,
-	      null,
-	      'This will be the default bank account for your payments with Klarna.'
-	    ),
-	    _react2.default.createElement(_LinkList2.default, { href: '/review', options: ['Privatkonto 123456789', 'Lonekonto 123456789'] })
-	  );
-	};
-
-/***/ },
-/* 282 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(283);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules!./styles.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?modules!./styles.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 283 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-	
-	
-	// module
 	exports.push([module.id, "._63OBNwNANRSLQict2Nbe8 {\n  margin-top: 50px;\n}\n\n._1PZSIiT2X0ZAp_9VJGmxia {\n  margin-top: 15px;\n}\n", ""]);
 	
 	// exports
@@ -28461,7 +28355,7 @@
 	};
 
 /***/ },
-/* 284 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28508,7 +28402,7 @@
 	};
 
 /***/ },
-/* 285 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28531,7 +28425,7 @@
 	
 	var _Link2 = _interopRequireDefault(_Link);
 	
-	var _styles = __webpack_require__(286);
+	var _styles = __webpack_require__(283);
 	
 	var _styles2 = _interopRequireDefault(_styles);
 	
@@ -28608,13 +28502,13 @@
 	};
 
 /***/ },
-/* 286 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(287);
+	var content = __webpack_require__(284);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -28634,7 +28528,7 @@
 	}
 
 /***/ },
-/* 287 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -28655,7 +28549,7 @@
 	};
 
 /***/ },
-/* 288 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28678,7 +28572,7 @@
 	
 	var _Link2 = _interopRequireDefault(_Link);
 	
-	var _styles = __webpack_require__(289);
+	var _styles = __webpack_require__(286);
 	
 	var _styles2 = _interopRequireDefault(_styles);
 	
@@ -28721,13 +28615,13 @@
 	};
 
 /***/ },
-/* 289 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(290);
+	var content = __webpack_require__(287);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -28747,7 +28641,7 @@
 	}
 
 /***/ },
-/* 290 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -28768,7 +28662,7 @@
 	};
 
 /***/ },
-/* 291 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28787,23 +28681,23 @@
 	
 	var _Button2 = _interopRequireDefault(_Button);
 	
-	var _Field = __webpack_require__(292);
+	var _Field = __webpack_require__(289);
 	
 	var _Field2 = _interopRequireDefault(_Field);
 	
-	var _styles = __webpack_require__(295);
+	var _styles = __webpack_require__(292);
 	
 	var _styles2 = _interopRequireDefault(_styles);
 	
-	var _UserDetails = __webpack_require__(297);
+	var _UserDetails = __webpack_require__(294);
 	
 	var _UserDetails2 = _interopRequireDefault(_UserDetails);
 	
-	var _Mail = __webpack_require__(298);
+	var _Mail = __webpack_require__(295);
 	
 	var _Mail2 = _interopRequireDefault(_Mail);
 	
-	var _Lock = __webpack_require__(301);
+	var _Lock = __webpack_require__(298);
 	
 	var _Lock2 = _interopRequireDefault(_Lock);
 	
@@ -28849,7 +28743,7 @@
 	};
 
 /***/ },
-/* 292 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28868,7 +28762,7 @@
 	
 	var _bind2 = _interopRequireDefault(_bind);
 	
-	var _field = __webpack_require__(293);
+	var _field = __webpack_require__(290);
 	
 	var _field2 = _interopRequireDefault(_field);
 	
@@ -29031,13 +28925,13 @@
 	};
 
 /***/ },
-/* 293 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(294);
+	var content = __webpack_require__(291);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -29057,7 +28951,7 @@
 	}
 
 /***/ },
-/* 294 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -29116,13 +29010,13 @@
 	};
 
 /***/ },
-/* 295 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(296);
+	var content = __webpack_require__(293);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -29142,7 +29036,7 @@
 	}
 
 /***/ },
-/* 296 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -29159,7 +29053,7 @@
 	};
 
 /***/ },
-/* 297 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -29192,7 +29086,7 @@
 	};
 
 /***/ },
-/* 298 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29205,7 +29099,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Icon = __webpack_require__(299);
+	var _Icon = __webpack_require__(296);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
@@ -29227,7 +29121,7 @@
 	exports.default = MailIcon;
 
 /***/ },
-/* 299 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29245,7 +29139,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _validateSize = __webpack_require__(300);
+	var _validateSize = __webpack_require__(297);
 	
 	var _validateSize2 = _interopRequireDefault(_validateSize);
 	
@@ -29295,7 +29189,7 @@
 	};
 
 /***/ },
-/* 300 */
+/* 297 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29317,7 +29211,7 @@
 	};
 
 /***/ },
-/* 301 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29330,7 +29224,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Icon = __webpack_require__(299);
+	var _Icon = __webpack_require__(296);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
@@ -29352,7 +29246,7 @@
 	exports.default = LockIcon;
 
 /***/ },
-/* 302 */
+/* 299 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29365,7 +29259,7 @@
 	
 	var _reactRouterRedux = __webpack_require__(187);
 	
-	var _reducer = __webpack_require__(303);
+	var _reducer = __webpack_require__(300);
 	
 	var _reducer2 = _interopRequireDefault(_reducer);
 	
@@ -29388,7 +29282,7 @@
 	exports.default = createStoreWithMiddleware(reducers);
 
 /***/ },
-/* 303 */
+/* 300 */
 /***/ function(module, exports) {
 
 	'use strict';
