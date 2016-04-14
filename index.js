@@ -28584,31 +28584,31 @@
 	    null,
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/home' },
+	      { href: 'home' },
 	      'Home'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/open_bank_id' },
+	      { href: 'open_bank_id' },
 	      'Open BankID'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/bank_accounts' },
+	      { href: 'bank_accounts' },
 	      'Bank accounts'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/review' },
+	      { href: 'review' },
 	      'Review'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/user_details' },
+	      { href: 'user_details' },
 	      'User details'
 	    )
 	  );
