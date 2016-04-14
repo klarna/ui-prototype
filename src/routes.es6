@@ -8,7 +8,7 @@ import AllPages from './AllPages'
 import Details from './Details'
 
 export default {
-  path: '/',
+  path: '/ui-prototype/',
   component: Layout,
   indexRoute: { component: AllPages },
   childRoutes: [

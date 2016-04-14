@@ -27103,7 +27103,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
-	  path: '/',
+	  path: '/ui-prototype/',
 	  component: _Layout2.default,
 	  indexRoute: { component: _AllPages2.default },
 	  childRoutes: [{ path: 'home', component: _Home2.default }, { path: 'open_bank_id', component: _OpenBankID2.default }, { path: 'open_bank_id2', component: _OpenBankID4.default }, { path: 'bank_accounts', component: _BankAccounts2.default }, { path: 'review', component: _Review2.default }, { path: 'user_details', component: _Details2.default }]
