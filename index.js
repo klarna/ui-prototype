@@ -27177,7 +27177,7 @@
 	
 	
 	// module
-	exports.push([module.id, "._26KHqYnCu0e_VGVw81zR7Y {\n  margin: 40px auto 0 auto;\n  max-width: 455px;  /*415 + 20 * 2*/\n  padding: 20px;\n  text-align: center;\n}\n\n._15vZJBTkkBo1njiSHvGkNZ {\n  position: absolute;\n  top: 20px;\n  right: 20px;\n}\n", ""]);
+	exports.push([module.id, "body {\n  font-family: 'Open Sans';\n}\n\n._26KHqYnCu0e_VGVw81zR7Y {\n  margin: 40px auto 0 auto;\n  max-width: 455px;  /*415 + 20 * 2*/\n  padding: 20px;\n  text-align: center;\n}\n\n._15vZJBTkkBo1njiSHvGkNZ {\n  position: absolute;\n  top: 20px;\n  right: 20px;\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
