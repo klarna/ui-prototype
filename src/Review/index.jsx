@@ -32,7 +32,7 @@ export default () => (
       AB Sveavagen 46, 11134 Stockholm
     </Paragraph>
 
-    <a href='/'>
+    <a href='/ui-prototype/'>
       <Button size='big' className={styles.button}>
         Confirm
       </Button>

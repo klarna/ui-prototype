@@ -13,7 +13,7 @@ const Home = () => (
       <br />
       <Link href='#'>Learn more</Link>
     </Paragraph>
-    <LinkList href='/open_bank_id' options={['Swedbank', 'Nordea', 'Handelsbanken', 'SEB', 'Other']} />
+    <LinkList href='/ui-prototype/open_bank_id' options={['Swedbank', 'Nordea', 'Handelsbanken', 'SEB', 'Other']} />
     <br />
     <Paragraph design='legal'>
       När du klickar på Fortsätt godkänner du att Klarna hämtar och visar dina bankkontonummer, se vilkoren. Klarna lagrar bara det kontonummer du viljer och inga övriga bankuppgifter.

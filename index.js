@@ -27372,7 +27372,7 @@
 	        'Learn more'
 	      )
 	    ),
-	    _react2.default.createElement(_LinkList2.default, { href: '/open_bank_id', options: ['Swedbank', 'Nordea', 'Handelsbanken', 'SEB', 'Other'] }),
+	    _react2.default.createElement(_LinkList2.default, { href: '/ui-prototype/open_bank_id', options: ['Swedbank', 'Nordea', 'Handelsbanken', 'SEB', 'Other'] }),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      _Text.Paragraph,
@@ -27982,7 +27982,7 @@
 	    ),
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/bank_accounts' },
+	      { href: '/ui-prototype/bank_accounts' },
 	      _react2.default.createElement(
 	        _Button2.default,
 	        { className: _styles2.default.button },
@@ -28307,7 +28307,7 @@
 	      null,
 	      'This will be the default bank account for your payments with Klarna.'
 	    ),
-	    _react2.default.createElement(_LinkList2.default, { href: '/review', options: ['Privatkonto 123456789', 'Lonekonto 123456789'] })
+	    _react2.default.createElement(_LinkList2.default, { href: '/ui-prototype/review', options: ['Privatkonto 123456789', 'Lonekonto 123456789'] })
 	  );
 	};
 
@@ -28491,7 +28491,7 @@
 	    ),
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/' },
+	      { href: '/ui-prototype/' },
 	      _react2.default.createElement(
 	        _Button2.default,
 	        { size: 'big', className: _styles2.default.button },
@@ -28584,31 +28584,31 @@
 	    null,
 	    _react2.default.createElement(
 	      'a',
-	      { href: 'home' },
+	      { href: '/ui-prototype/home' },
 	      'Home'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: 'open_bank_id' },
+	      { href: '/ui-prototype/open_bank_id' },
 	      'Open BankID'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: 'bank_accounts' },
+	      { href: '/ui-prototype/bank_accounts' },
 	      'Bank accounts'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: 'review' },
+	      { href: '/ui-prototype/review' },
 	      'Review'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: 'user_details' },
+	      { href: '/ui-prototype/user_details' },
 	      'User details'
 	    )
 	  );
@@ -28732,7 +28732,7 @@
 	    ),
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/bank_accounts' },
+	      { href: '/ui-prototype/bank_accounts' },
 	      _react2.default.createElement(
 	        _Button2.default,
 	        { size: 'big', className: _styles2.default.button },
