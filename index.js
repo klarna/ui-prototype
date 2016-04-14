@@ -70,7 +70,7 @@
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var history = (0, _reactRouterRedux.syncHistoryWithStore)(_reactRouter.browserHistory, _store2.default);
+	var history = (0, _reactRouterRedux.syncHistoryWithStore)(_reactRouter.hashHistory, _store2.default);
 	
 	var root = _react2.default.createElement(
 	  _reactRedux.Provider,
@@ -27099,7 +27099,7 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = {
-	  path: '/ui-prototype',
+	  path: '/',
 	  component: _Layout2.default,
 	  indexRoute: { component: _AllPages2.default },
 	  childRoutes: [{ path: 'home', component: _Home2.default }, { path: 'open_bank_id', component: _OpenBankID2.default }, { path: 'bank_accounts', component: _BankAccounts2.default }, { path: 'review', component: _Review2.default }, { path: 'user_details', component: _Details2.default }]
@@ -28570,31 +28570,31 @@
 	    null,
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/ui-prototype/home' },
+	      { href: '/home' },
 	      'Home'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/ui-prototype/open_bank_id' },
+	      { href: '/open_bank_id' },
 	      'Open BankID'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/ui-prototype/bank_accounts' },
+	      { href: '/bank_accounts' },
 	      'Bank accounts'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/ui-prototype/review' },
+	      { href: '/review' },
 	      'Review'
 	    ),
 	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      'a',
-	      { href: '/ui-prototype/user_details' },
+	      { href: '/user_details' },
 	      'User details'
 	    )
 	  );
