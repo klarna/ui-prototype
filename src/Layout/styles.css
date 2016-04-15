@@ -9,6 +9,10 @@ body {
   text-align: center;
 }
 
+.grid {
+  background: transparent url("http://klarna.github.io/ui-css-components/dist/img/baseline__grid.png") repeat scroll 0% 0%;
+}
+
 .close {
   position: absolute;
   top: 20px;

@@ -16,3 +16,11 @@ const root = (
 )
 
 render(root, document.getElementById('prototype'))
+
+window.onkeypress = (e) => {
+  if (e.which === 103) {
+    store.dispatch({
+      type: 'TOGGLE_GRID'
+    })
+  }
+}

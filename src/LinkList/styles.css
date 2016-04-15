@@ -6,7 +6,8 @@
   position: relative;
   display: block;
   color: #3C3C3E;
-
+  font-size: 14px;
+  border-sizing: border-box;
 }
 
 .icon {

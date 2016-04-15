@@ -6,8 +6,10 @@ import styles from './styles.css'
 import UserDetails from '../illustrations/UserDetails'
 import Mail from '@klarna/ui-react-components/components/icons/Mail'
 import Lock from '@klarna/ui-react-components/components/icons/Lock'
+import { submitForm } from '../actions'
+import { connect } from 'react-redux'
 
-export default () => (
+const Details = ({ error }) => (
   <main className={styles.main}>
     <UserDetails />
     <PrimaryTitle blue>
@@ -16,16 +18,18 @@ export default () => (
     <Paragraph>
       For security, we might need to contact you by phone or email.
     </Paragraph>
-    <Field label='Phone number' name='phone'>
-      <Lock />
-    </Field>
-    <Field label='Email' name='email' icon='email'>
-      <Mail />
-    </Field>
-    <a href='#bank_accounts'>
+    <form onSubmit={submitForm}>
+      <Field error={error.phone} label='Phone number' name='phone'>
+        <Lock />
+      </Field>
+      <Field error={error.email} label='Email' name='email' icon='email'>
+        <Mail />
+      </Field>
       <Button size='big' className={styles.button}>
         Continue
       </Button>
-    </a>
+    </form>
   </main>
 )
+
+export default connect((store) => store.data)(Details)

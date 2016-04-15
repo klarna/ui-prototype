@@ -16,15 +16,13 @@ export default () => (
       rasmus@klarna.com
       <Link className={styles.change}>Change</Link>
     </Paragraph>
-    <br />
-    <Paragraph design='secondary' className={styles.address}>
+    <Paragraph design='secondary' className={styles.address} style={{marginTop: 30}}>
       <span className={styles.title}>
         Privatkonto 123456789
       </span>
       <Link className={styles.change}>Change</Link>
     </Paragraph>
-    <br />
-    <Paragraph design='secondary' className={styles.klarnaAddress}>
+    <Paragraph design='secondary' className={styles.klarnaAddress} style={{marginTop: 30}}>
       <span className={styles.title}>
         BETALNINGSMOTTAGARE
       </span><br />

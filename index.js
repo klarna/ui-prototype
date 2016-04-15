@@ -64,7 +64,7 @@
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
-	var _store = __webpack_require__(297);
+	var _store = __webpack_require__(298);
 	
 	var _store2 = _interopRequireDefault(_store);
 	
@@ -79,6 +79,14 @@
 	);
 	
 	(0, _reactDom.render)(root, document.getElementById('prototype'));
+	
+	window.onkeypress = function (e) {
+	  if (e.which === 103) {
+	    _store2.default.dispatch({
+	      type: 'TOGGLE_GRID'
+	    });
+	  }
+	};
 
 /***/ },
 /* 1 */
@@ -27127,20 +27135,24 @@
 	
 	var _Close2 = _interopRequireDefault(_Close);
 	
-	var _reactRouter = __webpack_require__(192);
+	var _reactRedux = __webpack_require__(163);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = function (_ref) {
+	var Layout = function Layout(_ref) {
 	  var children = _ref.children;
-	  var location = _ref.location;
+	  var grid = _ref.grid;
 	  return _react2.default.createElement(
 	    'main',
-	    { className: _styles2.default.main },
+	    { className: _styles2.default.main + ' ' + (grid && _styles2.default.grid) },
 	    _react2.default.createElement(_Close2.default, { color: 'blue', className: _styles2.default.close }),
 	    children
 	  );
 	};
+	
+	exports.default = (0, _reactRedux.connect)(function (store) {
+	  return store.data;
+	})(Layout);
 
 /***/ },
 /* 250 */
@@ -27177,11 +27189,12 @@
 	
 	
 	// module
-	exports.push([module.id, "body {\n  font-family: 'Open Sans';\n}\n\n._26KHqYnCu0e_VGVw81zR7Y {\n  margin: 40px auto 0 auto;\n  max-width: 455px;  /*415 + 20 * 2*/\n  padding: 20px;\n  text-align: center;\n}\n\n._15vZJBTkkBo1njiSHvGkNZ {\n  position: absolute;\n  top: 20px;\n  right: 20px;\n}\n", ""]);
+	exports.push([module.id, "body {\n  font-family: 'Open Sans';\n}\n\n._26KHqYnCu0e_VGVw81zR7Y {\n  margin: 40px auto 0 auto;\n  max-width: 455px;  /*415 + 20 * 2*/\n  padding: 20px;\n  text-align: center;\n}\n\n._1SxwFzEwjSO4Kmsn1srRSl {\n  background: transparent url(\"http://klarna.github.io/ui-css-components/dist/img/baseline__grid.png\") repeat scroll 0% 0%;\n}\n\n._15vZJBTkkBo1njiSHvGkNZ {\n  position: absolute;\n  top: 20px;\n  right: 20px;\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
 		"main": "_26KHqYnCu0e_VGVw81zR7Y",
+		"grid": "_1SxwFzEwjSO4Kmsn1srRSl",
 		"close": "_15vZJBTkkBo1njiSHvGkNZ"
 	};
 
@@ -27373,10 +27386,9 @@
 	      )
 	    ),
 	    _react2.default.createElement(_LinkList2.default, { href: '#open_bank_id', options: ['Swedbank', 'Nordea', 'Handelsbanken', 'SEB', 'Other'] }),
-	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      _Text.Paragraph,
-	      { design: 'legal' },
+	      { design: 'legal', style: { marginTop: 20 } },
 	      'När du klickar på Fortsätt godkänner du att Klarna hämtar och visar dina bankkontonummer, se vilkoren. Klarna lagrar bara det kontonummer du viljer och inga övriga bankuppgifter.'
 	    )
 	  );
@@ -27925,7 +27937,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".ADzRmgbkdk2bIW5S3lehT {\n  text-align: left;\n  font-weight: 600;\n  border-top: 1px solid #E5E5E6;\n  padding: 15px 0;\n  position: relative;\n  display: block;\n  color: #3C3C3E;\n\n}\n\n._3TUnsn8SVQRX8-7VY5kKlb {\n  position: absolute;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n}\n", ""]);
+	exports.push([module.id, ".ADzRmgbkdk2bIW5S3lehT {\n  text-align: left;\n  font-weight: 600;\n  border-top: 1px solid #E5E5E6;\n  padding: 15px 0;\n  position: relative;\n  display: block;\n  color: #3C3C3E;\n  font-size: 14px;\n  border-sizing: border-box;\n}\n\n._3TUnsn8SVQRX8-7VY5kKlb {\n  position: absolute;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
@@ -27961,9 +27973,11 @@
 	
 	var _BankID2 = _interopRequireDefault(_BankID);
 	
+	var _reactRedux = __webpack_require__(163);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = function () {
+	var OpenBankID = function OpenBankID() {
 	  return _react2.default.createElement(
 	    'main',
 	    { className: _styles2.default.main },
@@ -27991,6 +28005,10 @@
 	    )
 	  );
 	};
+	
+	exports.default = (0, _reactRedux.connect)(function (store) {
+	  return store.data;
+	})(OpenBankID);
 
 /***/ },
 /* 268 */
@@ -28460,10 +28478,9 @@
 	        'Change'
 	      )
 	    ),
-	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      _Text.Paragraph,
-	      { design: 'secondary', className: _styles2.default.address },
+	      { design: 'secondary', className: _styles2.default.address, style: { marginTop: 30 } },
 	      _react2.default.createElement(
 	        'span',
 	        { className: _styles2.default.title },
@@ -28475,10 +28492,9 @@
 	        'Change'
 	      )
 	    ),
-	    _react2.default.createElement('br', null),
 	    _react2.default.createElement(
 	      _Text.Paragraph,
-	      { design: 'secondary', className: _styles2.default.klarnaAddress },
+	      { design: 'secondary', className: _styles2.default.klarnaAddress, style: { marginTop: 30 } },
 	      _react2.default.createElement(
 	        'span',
 	        { className: _styles2.default.title },
@@ -28536,7 +28552,7 @@
 	
 	
 	// module
-	exports.push([module.id, "._2G5IRIqapa_xqxIdrB-jNB {\n}\n\n.QFuZMRnk9o0JDIWtU1GsY {\n  margin-top: 15px;\n  width: 100%;\n}\n\n._21O4mizVhiO2YZ54RZqqEB {\n  font-weight: 600;\n  color: #3C3C3E;\n}\n\n._1viscFqrCXnRUZqjJyPaUH {\n  text-align: left;\n  border-top: 1px solid #eee;\n  border-bottom: 1px solid #eee;\n  padding: 10px 0;\n  position: relative;\n}\n\n._3r2vxvvbf7xWKgdBAMt2HJ {\n  position: absolute;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n._2O0lDd02FbWxR4FREQKfEX {\n  text-align: left;\n}\n", ""]);
+	exports.push([module.id, "._2G5IRIqapa_xqxIdrB-jNB {\n}\n\n.QFuZMRnk9o0JDIWtU1GsY {\n  margin-top: 15px;\n  width: 100%;\n}\n\n._21O4mizVhiO2YZ54RZqqEB {\n  font-weight: 600;\n  color: #3C3C3E;\n}\n\n._1viscFqrCXnRUZqjJyPaUH {\n  text-align: left;\n  border-top: 1px solid #eee;\n  border-bottom: 1px solid #eee;\n  padding: 12px 0 11px;\n  position: relative;\n  box-sizing: content-box;\n}\n\n._3r2vxvvbf7xWKgdBAMt2HJ {\n  position: absolute;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n._2O0lDd02FbWxR4FREQKfEX {\n  text-align: left;\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
@@ -28640,9 +28656,14 @@
 	
 	var _Lock2 = _interopRequireDefault(_Lock);
 	
+	var _actions = __webpack_require__(297);
+	
+	var _reactRedux = __webpack_require__(163);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	exports.default = function () {
+	var Details = function Details(_ref) {
+	  var error = _ref.error;
 	  return _react2.default.createElement(
 	    'main',
 	    { className: _styles2.default.main },
@@ -28660,18 +28681,18 @@
 	      'For security, we might need to contact you by phone or email.'
 	    ),
 	    _react2.default.createElement(
-	      _Field2.default,
-	      { label: 'Phone number', name: 'phone' },
-	      _react2.default.createElement(_Lock2.default, null)
-	    ),
-	    _react2.default.createElement(
-	      _Field2.default,
-	      { label: 'Email', name: 'email', icon: 'email' },
-	      _react2.default.createElement(_Mail2.default, null)
-	    ),
-	    _react2.default.createElement(
-	      'a',
-	      { href: '#bank_accounts' },
+	      'form',
+	      { onSubmit: _actions.submitForm },
+	      _react2.default.createElement(
+	        _Field2.default,
+	        { error: error.phone, label: 'Phone number', name: 'phone' },
+	        _react2.default.createElement(_Lock2.default, null)
+	      ),
+	      _react2.default.createElement(
+	        _Field2.default,
+	        { error: error.email, label: 'Email', name: 'email', icon: 'email' },
+	        _react2.default.createElement(_Mail2.default, null)
+	      ),
 	      _react2.default.createElement(
 	        _Button2.default,
 	        { size: 'big', className: _styles2.default.button },
@@ -28680,6 +28701,10 @@
 	    )
 	  );
 	};
+	
+	exports.default = (0, _reactRedux.connect)(function (store) {
+	  return store.data;
+	})(Details);
 
 /***/ },
 /* 287 */
@@ -29018,7 +29043,7 @@
 	    ),
 	    _react2.default.createElement(
 	      "g",
-	      { stroke: "none", "stroke-width": "1", fill: "#EFF4F9" },
+	      { stroke: "none", strokeWidth: "1", fill: "#EFF4F9" },
 	      _react2.default.createElement("path", { d: "M100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 C77.614,0 100,22.386 100,50", id: "Fill-1" })
 	    )
 	  );
@@ -29193,12 +29218,47 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.submitForm = submitForm;
+	
+	var _store = __webpack_require__(298);
+	
+	var _store2 = _interopRequireDefault(_store);
+	
+	var _reactRouter = __webpack_require__(192);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function submitForm(e) {
+	  e.preventDefault();
+	  var phone = e.target.phone.value;
+	  var email = e.target.email.value;
+	
+	  if (phone.length < 8) {
+	    return _store2.default.dispatch({ type: 'PHONE_ERROR' });
+	  }
+	
+	  if (!email.match(/^\w+@\w+\.com$/)) {
+	    return _store2.default.dispatch({ type: 'EMAIL_ERROR' });
+	  }
+	
+	  _reactRouter.hashHistory.push('bank_accounts');
+	}
+
+/***/ },
+/* 298 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 	
 	var _redux = __webpack_require__(170);
 	
 	var _reactRouterRedux = __webpack_require__(187);
 	
-	var _reducer = __webpack_require__(298);
+	var _reducer = __webpack_require__(299);
 	
 	var _reducer2 = _interopRequireDefault(_reducer);
 	
@@ -29221,7 +29281,7 @@
 	exports.default = createStoreWithMiddleware(reducers);
 
 /***/ },
-/* 298 */
+/* 299 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29229,7 +29289,13 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-	var initialState = {};
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var initialState = {
+	  grid: false,
+	  error: {}
+	};
 	
 	exports.default = function () {
 	  var state = arguments.length <= 0 || arguments[0] === undefined ? initialState : arguments[0];
@@ -29238,8 +29304,15 @@
 	  var payload = _ref.payload;
 	
 	  switch (type) {
+	    case 'TOGGLE_GRID':
+	      var grid = !state.grid;
+	      return _extends({}, state, { grid: grid });
+	    case 'PHONE_ERROR':
+	      return _extends({}, state, { error: { phone: 'Invalid phone' } });
+	    case 'EMAIL_ERROR':
+	      return _extends({}, state, { error: { email: 'Invalid email' } });
 	    case 'SUBMIT_FORM':
-	      return { error: 'Name ' + payload + ' is invalid' };
+	      return _extends({}, state, { error: 'Name ' + payload + ' is invalid' });
 	    default:
 	      return state;
 	  }

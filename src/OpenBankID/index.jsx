@@ -3,8 +3,9 @@ import { PrimaryTitle, Paragraph } from '@klarna/ui-react-components/components/
 import Button from '@klarna/ui-react-components/components/Button'
 import styles from './styles.css'
 import BankID from '../illustrations/BankID'
+import { connect } from 'react-redux'
 
-export default () => (
+const OpenBankID = () => (
   <main className={styles.main}>
     <BankID />
     <PrimaryTitle blue>
@@ -20,3 +21,6 @@ export default () => (
     </a>
   </main>
 )
+
+export default connect((store) => store.data)(OpenBankID)
+
