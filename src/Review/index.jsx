@@ -3,9 +3,10 @@ import { PrimaryTitle, SecondaryTitle, Paragraph } from '@klarna/ui-react-compon
 import Button from '@klarna/ui-react-components/components/Button'
 import Link from '@klarna/ui-react-components/components/Link'
 import styles from './styles.css'
+import Dialog from '../Dialog/index'
 
 export default () => (
-  <main className={styles.main}>
+  <Dialog>
     <PrimaryTitle blue>
       Review your details
     </PrimaryTitle>
@@ -35,5 +36,5 @@ export default () => (
         Confirm
       </Button>
     </a>
-  </main>
+  </Dialog>
 )

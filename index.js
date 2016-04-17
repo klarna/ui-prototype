@@ -64,7 +64,7 @@
 	
 	var _routes2 = _interopRequireDefault(_routes);
 	
-	var _store = __webpack_require__(298);
+	var _store = __webpack_require__(302);
 	
 	var _store2 = _interopRequireDefault(_store);
 	
@@ -27080,27 +27080,27 @@
 	
 	var _Layout2 = _interopRequireDefault(_Layout);
 	
-	var _Home = __webpack_require__(254);
+	var _Home = __webpack_require__(252);
 	
 	var _Home2 = _interopRequireDefault(_Home);
 	
-	var _OpenBankID = __webpack_require__(267);
+	var _OpenBankID = __webpack_require__(271);
 	
 	var _OpenBankID2 = _interopRequireDefault(_OpenBankID);
 	
-	var _BankAccounts = __webpack_require__(278);
+	var _BankAccounts = __webpack_require__(282);
 	
 	var _BankAccounts2 = _interopRequireDefault(_BankAccounts);
 	
-	var _Review = __webpack_require__(282);
+	var _Review = __webpack_require__(286);
 	
 	var _Review2 = _interopRequireDefault(_Review);
 	
-	var _AllPages = __webpack_require__(285);
+	var _AllPages = __webpack_require__(289);
 	
 	var _AllPages2 = _interopRequireDefault(_AllPages);
 	
-	var _Details = __webpack_require__(286);
+	var _Details = __webpack_require__(290);
 	
 	var _Details2 = _interopRequireDefault(_Details);
 	
@@ -27131,10 +27131,6 @@
 	
 	var _styles2 = _interopRequireDefault(_styles);
 	
-	var _Close = __webpack_require__(252);
-	
-	var _Close2 = _interopRequireDefault(_Close);
-	
 	var _reactRedux = __webpack_require__(163);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -27144,8 +27140,7 @@
 	  var grid = _ref.grid;
 	  return _react2.default.createElement(
 	    'main',
-	    { className: _styles2.default.main + ' ' + (grid && _styles2.default.grid) },
-	    _react2.default.createElement(_Close2.default, { color: 'blue', className: _styles2.default.close }),
+	    { className: grid && _styles2.default.grid },
 	    children
 	  );
 	};
@@ -27208,165 +27203,38 @@
 	  value: true
 	});
 	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
 	var _react = __webpack_require__(5);
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Icon = __webpack_require__(253);
+	var _Text = __webpack_require__(253);
 	
-	var _Icon2 = _interopRequireDefault(_Icon);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	var Close = function Close(hexColor, props) {
-	  return _react2.default.createElement(
-	    _Icon2.default,
-	    _extends({
-	      stroke: hexColor,
-	      strokeLinecap: 'round',
-	      strokeWidth: '2',
-	      size: '25px',
-	      viewBox: '0 0 25 25'
-	    }, props),
-	    [45, -45].map(function (deg) {
-	      return _react2.default.createElement('line', { key: deg, style: { transformOrigin: '50% 50%', transform: 'rotate(' + deg + 'deg)' }, x1: '3.3', x2: '21.7', y1: '12.5', y2: '12.5' });
-	    })
-	  );
-	};
-	
-	exports.default = (0, _Icon.icon)(Close);
-
-/***/ },
-/* 253 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.icon = exports.colors = undefined;
-	
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-	
-	exports.default = Icon;
-	
-	var _react = __webpack_require__(5);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-	
-	function Icon(props) {
-	  var children = props.children;
-	  var size = props.size;
-	  var title = props.title;
-	
-	  var remainingProps = _objectWithoutProperties(props, ['children', 'size', 'title']);
-	
-	  return _react2.default.createElement(
-	    'svg',
-	    _extends({
-	      width: size,
-	      height: size,
-	      viewBox: '0 0 100 100',
-	      version: '1.1',
-	      'aria-labelledby': title
-	    }, remainingProps),
-	    _react2.default.createElement(
-	      'title',
-	      null,
-	      title
-	    ),
-	    children
-	  );
-	}
-	
-	var colors = exports.colors = {
-	  black: '#221F20', // regular
-	  gray: '#cbcbcd', // disabled
-	  red: '#e63200', // error
-	  green: '#7ED321', // success
-	  blue: '#0074c8', // focused
-	  orange: '#e0a644', // warning
-	  white: '#fff' // to be used with blue background
-	};
-	
-	Icon.defaultProps = {
-	  size: '100px',
-	  title: 'Icon'
-	};
-	
-	Icon.propTypes = {
-	  size: _react.PropTypes.string,
-	  title: _react.PropTypes.string,
-	  children: _react.PropTypes.node
-	};
-	
-	var icon = exports.icon = function icon(component) {
-	  var exportedIcon = function exportedIcon(_ref) {
-	    var _ref$color = _ref.color;
-	    var color = _ref$color === undefined ? 'black' : _ref$color;
-	
-	    var props = _objectWithoutProperties(_ref, ['color']);
-	
-	    var hexColor = colors[color];
-	    return component(hexColor, props);
-	  };
-	
-	  exportedIcon.defaultProps = _extends({
-	    title: component.name
-	  }, component.defaultProps);
-	
-	  exportedIcon.propTypes = _extends({
-	    color: _react.PropTypes.oneOf(Object.keys(colors)),
-	    title: _react.PropTypes.string
-	  }, component.propTypes);
-	
-	  exportedIcon.displayName = component.name;
-	  return exportedIcon;
-	};
-
-/***/ },
-/* 254 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _react = __webpack_require__(5);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _Text = __webpack_require__(255);
-	
-	var _Link = __webpack_require__(259);
+	var _Link = __webpack_require__(257);
 	
 	var _Link2 = _interopRequireDefault(_Link);
 	
-	var _styles = __webpack_require__(262);
-	
-	var _styles2 = _interopRequireDefault(_styles);
-	
 	var _reactRedux = __webpack_require__(163);
 	
-	var _LinkList = __webpack_require__(264);
+	var _LinkList = __webpack_require__(260);
 	
 	var _LinkList2 = _interopRequireDefault(_LinkList);
 	
+	var _index = __webpack_require__(263);
+	
+	var _index2 = _interopRequireDefault(_index);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var footer = _react2.default.createElement(
+	  _Text.Paragraph,
+	  { design: 'legal', style: { marginTop: 20 } },
+	  'När du klickar på Fortsätt godkänner du att Klarna hämtar och visar dina bankkontonummer, se vilkoren. Klarna lagrar bara det kontonummer du viljer och inga övriga bankuppgifter.'
+	);
 	
 	var Home = function Home() {
 	  return _react2.default.createElement(
-	    'main',
-	    { className: _styles2.default.main },
+	    _index2.default,
+	    { footer: footer },
 	    _react2.default.createElement(
 	      _Text.PrimaryTitle,
 	      { blue: true },
@@ -27378,19 +27246,14 @@
 	      _Text.Paragraph,
 	      null,
 	      'Set up Klarna Direkt in seconds using your Mobilt BankID. You will only have to do this once.',
-	      _react2.default.createElement('br', null),
-	      _react2.default.createElement(
-	        _Link2.default,
-	        { href: '#' },
-	        'Learn more'
-	      )
+	      _react2.default.createElement('br', null)
 	    ),
-	    _react2.default.createElement(_LinkList2.default, { href: '#open_bank_id', options: ['Swedbank', 'Nordea', 'Handelsbanken', 'SEB', 'Other'] }),
 	    _react2.default.createElement(
-	      _Text.Paragraph,
-	      { design: 'legal', style: { marginTop: 20 } },
-	      'När du klickar på Fortsätt godkänner du att Klarna hämtar och visar dina bankkontonummer, se vilkoren. Klarna lagrar bara det kontonummer du viljer och inga övriga bankuppgifter.'
-	    )
+	      _Link2.default,
+	      { href: '#', style: { display: 'block', marginBottom: '30px' } },
+	      'Learn more'
+	    ),
+	    _react2.default.createElement(_LinkList2.default, { href: '#open_bank_id', options: ['Swedbank', 'Nordea', 'Handelsbanken', 'SEB', 'Other'] })
 	  );
 	};
 	
@@ -27399,7 +27262,7 @@
 	})(Home);
 
 /***/ },
-/* 255 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27421,11 +27284,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _bind = __webpack_require__(256);
+	var _bind = __webpack_require__(254);
 	
 	var _bind2 = _interopRequireDefault(_bind);
 	
-	var _text = __webpack_require__(257);
+	var _text = __webpack_require__(255);
 	
 	var _text2 = _interopRequireDefault(_text);
 	
@@ -27609,7 +27472,7 @@
 	};
 
 /***/ },
-/* 256 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -27663,13 +27526,13 @@
 
 
 /***/ },
-/* 257 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(258);
+	var content = __webpack_require__(256);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -27689,7 +27552,7 @@
 	}
 
 /***/ },
-/* 258 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -27697,7 +27560,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes spin {\n  to {\n    transform: rotate(1turn); } }\n\n/*******************************************************************************\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie { // Targets all IE browsers\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie(8) { // Targets only IE 8\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie((8,9)) { // Targets both IE 8 and IE 9\n        padding-top: 22px;\n    }\n}\n*******************************************************************************/\n.cui__title--primary {\n  font-size: 26px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 300;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #3c3c3e;\n  line-height: 35px;\n  margin: 0;\n  padding: 18px 0 17px; }\n  .cui__title--primary.blue {\n    color: #0074c8; }\n  .cui__title--primary.white {\n    color: #fff; }\n  .cui__title--primary.small {\n    font-size: 22px;\n    font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n    font-weight: 300;\n    text-rendering: geometricPrecision;\n    -webkit-font-smoothing: antialiased;\n    padding: 19px 0 16px; }\n    .cui__title--primary.small.strong {\n      font-size: 22px;\n      font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n      font-weight: 400;\n      text-rendering: geometricPrecision;\n      -webkit-font-smoothing: antialiased; }\n  .cui__title--primary + .cui__subtitle {\n    margin-top: -10px; }\n\n.cui__title--secondary {\n  font-size: 15px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #3c3c3e;\n  line-height: 15px;\n  margin: 0;\n  padding: 22px 0 13px; }\n  .cui__title--secondary.blue {\n    color: #0074c8; }\n  .cui__title--secondary.white {\n    color: #fff; }\n  .cui__title--secondary.condensed {\n    padding: 2px 0 8px; }\n\n.cui__subtitle {\n  font-size: 12px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #3c3c3e;\n  height: 20px;\n  line-height: 20px;\n  margin: 0;\n  padding: 16px 0 9px;\n  text-transform: uppercase; }\n  .cui__subtitle.blue {\n    color: #0074c8; }\n  .cui__subtitle.white {\n    color: #fff; }\n  .cui__subtitle.condensed {\n    padding: 1px 0 9px; }\n\n.cui__paragraph--primary {\n  line-height: 25px;\n  margin: 0;\n  padding: 3px 0 17px;\n  font-size: 13px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #3c3c3e; }\n  .cui__paragraph--primary.blue {\n    color: #0074c8; }\n  .cui__paragraph--primary.white {\n    color: #fff; }\n  .cui__paragraph--primary.condensed {\n    line-height: 20px;\n    padding-top: 0;\n    padding-bottom: 15px;\n    font-size: 13px;\n    font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n    font-weight: 400;\n    text-rendering: geometricPrecision;\n    -webkit-font-smoothing: antialiased;\n    color: #3c3c3e; }\n    .cui__paragraph--primary.condensed.blue {\n      color: #0074c8; }\n    .cui__paragraph--primary.condensed.white {\n      color: #fff; }\n\n.cui__paragraph--secondary {\n  line-height: 25px;\n  margin: 0;\n  padding: 3px 0 17px;\n  font-size: 13px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #9e9ea0; }\n  .cui__paragraph--secondary.blue {\n    color: #0074c8; }\n  .cui__paragraph--secondary.white {\n    color: #fff; }\n  .cui__paragraph--secondary.condensed {\n    line-height: 20px;\n    padding-top: 0;\n    padding-bottom: 15px;\n    font-size: 13px;\n    font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n    font-weight: 400;\n    text-rendering: geometricPrecision;\n    -webkit-font-smoothing: antialiased;\n    color: #9e9ea0; }\n    .cui__paragraph--secondary.condensed.blue {\n      color: #0074c8; }\n    .cui__paragraph--secondary.condensed.white {\n      color: #fff; }\n\n.cui__paragraph--legal {\n  font-size: 11px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #9e9ea0;\n  line-height: 20px;\n  margin: 0;\n  padding: 2px 0 13px; }\n  .cui__paragraph--legal.blue {\n    color: #0074c8; }\n  .cui__paragraph--legal.white {\n    color: #fff; }\n\n.cui__promo-label {\n  font-size: 10px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  background: #0074c8;\n  border-radius: 5px;\n  bottom: 1px;\n  color: white;\n  display: inline-block;\n  left: 4px;\n  line-height: 15px;\n  padding: 0 5px;\n  position: relative;\n  text-transform: uppercase; }\n  .is-disabled .cui__promo-label {\n    background: #cbcbcd; }\n\n.cui__text-label {\n  font-size: 12px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #9e9ea0;\n  line-height: 15px;\n  margin: 0;\n  padding: 8px 0 2px; }\n  .cui__text-label.blue {\n    color: #0074c8; }\n  .cui__text-label.white {\n    color: #fff; }\n  .cui__text-label + .cui__title--secondary {\n    padding-top: 2px; }\n\n.cui__amount-text {\n  font-size: 48px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 300;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #3c3c3e;\n  line-height: 50px;\n  margin: 0;\n  padding: 6px 0 4px; }\n  .cui__amount-text.blue {\n    color: #0074c8; }\n  .cui__amount-text.white {\n    color: #fff; }\n", ""]);
+	exports.push([module.id, "@keyframes spin {\n  to {\n    transform: rotate(1turn); } }\n\n/*******************************************************************************\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie { // Targets all IE browsers\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie(8) { // Targets only IE 8\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie((8,9)) { // Targets both IE 8 and IE 9\n        padding-top: 22px;\n    }\n}\n*******************************************************************************/\n.cui__title--primary {\n  font-size: 26px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 300;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #3c3c3e;\n  line-height: 35px;\n  margin: 0;\n  padding: 18px 0 17px; }\n  .cui__title--primary.blue {\n    color: #0074c8; }\n  .cui__title--primary.white {\n    color: #fff; }\n  .cui__title--primary.small {\n    font-size: 22px;\n    font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n    font-weight: 300;\n    text-rendering: geometricPrecision;\n    -webkit-font-smoothing: antialiased;\n    padding: 19px 0 16px; }\n    .cui__title--primary.small.strong {\n      font-size: 22px;\n      font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n      font-weight: 400;\n      text-rendering: geometricPrecision;\n      -webkit-font-smoothing: antialiased; }\n  .cui__title--primary + .cui__subtitle {\n    margin-top: -10px; }\n\n.cui__title--secondary {\n  font-size: 15px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #3c3c3e;\n  line-height: 15px;\n  margin: 0;\n  padding: 22px 0 13px; }\n  .cui__title--secondary.blue {\n    color: #0074c8; }\n  .cui__title--secondary.white {\n    color: #fff; }\n  .cui__title--secondary.condensed {\n    padding: 2px 0 8px; }\n\n.cui__subtitle {\n  font-size: 12px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #3c3c3e;\n  height: 20px;\n  line-height: 20px;\n  margin: 0;\n  padding: 16px 0 9px;\n  text-transform: uppercase; }\n  .cui__subtitle.blue {\n    color: #0074c8; }\n  .cui__subtitle.white {\n    color: #fff; }\n  .cui__subtitle.condensed {\n    padding: 1px 0 9px; }\n\n.cui__paragraph--primary {\n  line-height: 25px;\n  margin: 0;\n  padding: 3px 0 17px;\n  font-size: 13px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #3c3c3e; }\n  .cui__paragraph--primary.blue {\n    color: #0074c8; }\n  .cui__paragraph--primary.white {\n    color: #fff; }\n  .cui__paragraph--primary.condensed {\n    line-height: 20px;\n    padding-top: 0;\n    padding-bottom: 15px;\n    font-size: 13px;\n    font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n    font-weight: 400;\n    text-rendering: geometricPrecision;\n    -webkit-font-smoothing: antialiased;\n    color: #3c3c3e; }\n    .cui__paragraph--primary.condensed.blue {\n      color: #0074c8; }\n    .cui__paragraph--primary.condensed.white {\n      color: #fff; }\n\n.cui__paragraph--secondary {\n  line-height: 25px;\n  margin: 0;\n  padding: 3px 0 17px;\n  font-size: 13px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #9e9ea0; }\n  .cui__paragraph--secondary.blue {\n    color: #0074c8; }\n  .cui__paragraph--secondary.white {\n    color: #fff; }\n  .cui__paragraph--secondary.condensed {\n    line-height: 20px;\n    padding-top: 0;\n    padding-bottom: 15px;\n    font-size: 13px;\n    font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n    font-weight: 400;\n    text-rendering: geometricPrecision;\n    -webkit-font-smoothing: antialiased;\n    color: #9e9ea0; }\n    .cui__paragraph--secondary.condensed.blue {\n      color: #0074c8; }\n    .cui__paragraph--secondary.condensed.white {\n      color: #fff; }\n\n.cui__paragraph--legal {\n  font-size: 11px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #9e9ea0;\n  line-height: 20px;\n  margin: 0;\n  padding: 1px 0 14px; }\n  .cui__paragraph--legal.blue {\n    color: #0074c8; }\n  .cui__paragraph--legal.white {\n    color: #fff; }\n\n.cui__promo-label {\n  font-size: 10px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  background: #0074c8;\n  border-radius: 5px;\n  bottom: 1px;\n  color: white;\n  display: inline-block;\n  left: 4px;\n  line-height: 15px;\n  padding: 0 5px;\n  position: relative;\n  text-transform: uppercase; }\n  .is-disabled .cui__promo-label {\n    background: #cbcbcd; }\n\n.cui__text-label {\n  font-size: 12px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #9e9ea0;\n  line-height: 15px;\n  margin: 0;\n  padding: 8px 0 2px; }\n  .cui__text-label.blue {\n    color: #0074c8; }\n  .cui__text-label.white {\n    color: #fff; }\n  .cui__text-label + .cui__title--secondary {\n    padding-top: 2px; }\n\n.cui__amount-text {\n  font-size: 48px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 300;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #3c3c3e;\n  line-height: 50px;\n  margin: 0;\n  padding: 6px 0 4px; }\n  .cui__amount-text.blue {\n    color: #0074c8; }\n  .cui__amount-text.white {\n    color: #fff; }\n", ""]);
 	
 	// exports
 	exports.locals = {
@@ -27720,7 +27583,7 @@
 	};
 
 /***/ },
-/* 259 */
+/* 257 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27737,11 +27600,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _bind = __webpack_require__(256);
+	var _bind = __webpack_require__(254);
 	
 	var _bind2 = _interopRequireDefault(_bind);
 	
-	var _link = __webpack_require__(260);
+	var _link = __webpack_require__(258);
 	
 	var _link2 = _interopRequireDefault(_link);
 	
@@ -27772,13 +27635,13 @@
 	};
 
 /***/ },
-/* 260 */
+/* 258 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(261);
+	var content = __webpack_require__(259);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -27798,7 +27661,7 @@
 	}
 
 /***/ },
-/* 261 */
+/* 259 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -27815,50 +27678,7 @@
 	};
 
 /***/ },
-/* 262 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(263);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules!./styles.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js?modules!./styles.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 263 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "._3IzkqMEk5ICJAtxdMPf1R4 {\n  text-align: center;\n}\n\n.JKkMdoHJDZ9O7tTnsapaS {\n  border: 0;\n  margin: 0;\n  padding: 10px 0;\n}\n", ""]);
-	
-	// exports
-	exports.locals = {
-		"main": "_3IzkqMEk5ICJAtxdMPf1R4",
-		"fieldset": "JKkMdoHJDZ9O7tTnsapaS"
-	};
-
-/***/ },
-/* 264 */
+/* 260 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27871,11 +27691,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _styles = __webpack_require__(265);
+	var _styles = __webpack_require__(261);
 	
 	var _styles2 = _interopRequireDefault(_styles);
 	
-	var _Link = __webpack_require__(259);
+	var _Link = __webpack_require__(257);
 	
 	var _Link2 = _interopRequireDefault(_Link);
 	
@@ -27890,7 +27710,7 @@
 	    options.map(function (option) {
 	      return _react2.default.createElement(
 	        _Link2.default,
-	        { key: option, href: href, className: _styles2.default.item, style: option === options[0] ? { borderTop: 0 } : {} },
+	        { key: option, href: href, className: _styles2.default.item },
 	        option,
 	        _react2.default.createElement(
 	          'svg',
@@ -27903,13 +27723,13 @@
 	};
 
 /***/ },
-/* 265 */
+/* 261 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(266);
+	var content = __webpack_require__(262);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -27929,7 +27749,7 @@
 	}
 
 /***/ },
-/* 266 */
+/* 262 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -27937,7 +27757,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".ADzRmgbkdk2bIW5S3lehT {\n  text-align: left;\n  font-weight: 600;\n  border-top: 1px solid #E5E5E6;\n  padding: 15px 0;\n  position: relative;\n  display: block;\n  color: #3C3C3E;\n  font-size: 14px;\n  border-sizing: border-box;\n}\n\n._3TUnsn8SVQRX8-7VY5kKlb {\n  position: absolute;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n}\n", ""]);
+	exports.push([module.id, ".ADzRmgbkdk2bIW5S3lehT {\n  text-align: left;\n  font-weight: 600;\n  border-top: 1px solid #E5E5E6;\n  padding: 20px 0;\n  position: relative;\n  display: block;\n  color: #3C3C3E;\n  font-size: 14px;\n  border-sizing: border-box;\n}\n\n.ADzRmgbkdk2bIW5S3lehT:hover {\n  border-top: 1px solid #0074c8;\n\n  color: #3C3C3E;\n}\n\n.ADzRmgbkdk2bIW5S3lehT:hover + .ADzRmgbkdk2bIW5S3lehT {\n  border-top: 1px solid #0074c8;\n}\n\n.ADzRmgbkdk2bIW5S3lehT:first-child {\n  border-top: 1px solid #fff;\n}\n\n.ADzRmgbkdk2bIW5S3lehT:first-child:hover {\n  border-top: 1px solid #0074c8;\n}\n\n._3TUnsn8SVQRX8-7VY5kKlb {\n  position: absolute;\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n}\n", ""]);
 	
 	// exports
 	exports.locals = {
@@ -27946,7 +27766,7 @@
 	};
 
 /***/ },
-/* 267 */
+/* 263 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27959,28 +27779,421 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Text = __webpack_require__(255);
+	var _Close = __webpack_require__(264);
 	
-	var _Button = __webpack_require__(268);
+	var _Close2 = _interopRequireDefault(_Close);
 	
-	var _Button2 = _interopRequireDefault(_Button);
+	var _Dialog = __webpack_require__(266);
 	
-	var _styles = __webpack_require__(275);
+	var _Dialog2 = _interopRequireDefault(_Dialog);
+	
+	var _styles = __webpack_require__(269);
 	
 	var _styles2 = _interopRequireDefault(_styles);
 	
-	var _BankID = __webpack_require__(277);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	exports.default = function (_ref) {
+	  var children = _ref.children;
+	  var footer = _ref.footer;
+	  return _react2.default.createElement(
+	    _Dialog2.default,
+	    null,
+	    _react2.default.createElement(
+	      _Dialog2.default.Icon,
+	      null,
+	      _react2.default.createElement(_Close2.default, { color: 'blue' })
+	    ),
+	    _react2.default.createElement(
+	      _Dialog2.default.Content,
+	      { className: _styles2.default.content },
+	      children
+	    ),
+	    _react2.default.createElement(
+	      _Dialog2.default.Footer,
+	      null,
+	      footer
+	    )
+	  );
+	};
+
+/***/ },
+/* 264 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	var _react = __webpack_require__(5);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Icon = __webpack_require__(265);
+	
+	var _Icon2 = _interopRequireDefault(_Icon);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	var Close = function Close(hexColor, props) {
+	  return _react2.default.createElement(
+	    _Icon2.default,
+	    _extends({
+	      stroke: hexColor,
+	      strokeLinecap: 'round',
+	      strokeWidth: '2',
+	      size: '25px',
+	      viewBox: '0 0 25 25'
+	    }, props),
+	    [45, -45].map(function (deg) {
+	      return _react2.default.createElement('line', { key: deg, style: { transformOrigin: '50% 50%', transform: 'rotate(' + deg + 'deg)' }, x1: '3.3', x2: '21.7', y1: '12.5', y2: '12.5' });
+	    })
+	  );
+	};
+	
+	exports.default = (0, _Icon.icon)(Close);
+
+/***/ },
+/* 265 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.icon = exports.colors = undefined;
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	exports.default = Icon;
+	
+	var _react = __webpack_require__(5);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	function Icon(props) {
+	  var children = props.children;
+	  var size = props.size;
+	  var title = props.title;
+	
+	  var remainingProps = _objectWithoutProperties(props, ['children', 'size', 'title']);
+	
+	  return _react2.default.createElement(
+	    'svg',
+	    _extends({
+	      width: size,
+	      height: size,
+	      viewBox: '0 0 100 100',
+	      version: '1.1',
+	      'aria-labelledby': title
+	    }, remainingProps),
+	    _react2.default.createElement(
+	      'title',
+	      null,
+	      title
+	    ),
+	    children
+	  );
+	}
+	
+	var colors = exports.colors = {
+	  black: '#221F20', // regular
+	  gray: '#cbcbcd', // disabled
+	  red: '#e63200', // error
+	  green: '#7ED321', // success
+	  blue: '#0074c8', // focused
+	  orange: '#e0a644', // warning
+	  white: '#fff' // to be used with blue background
+	};
+	
+	Icon.defaultProps = {
+	  size: '100px',
+	  title: 'Icon'
+	};
+	
+	Icon.propTypes = {
+	  size: _react.PropTypes.string,
+	  title: _react.PropTypes.string,
+	  children: _react.PropTypes.node
+	};
+	
+	var icon = exports.icon = function icon(component) {
+	  var exportedIcon = function exportedIcon(_ref) {
+	    var _ref$color = _ref.color;
+	    var color = _ref$color === undefined ? 'black' : _ref$color;
+	
+	    var props = _objectWithoutProperties(_ref, ['color']);
+	
+	    var hexColor = colors[color];
+	    return component(hexColor, props);
+	  };
+	
+	  exportedIcon.defaultProps = _extends({
+	    title: component.name
+	  }, component.defaultProps);
+	
+	  exportedIcon.propTypes = _extends({
+	    color: _react.PropTypes.oneOf(Object.keys(colors)),
+	    title: _react.PropTypes.string
+	  }, component.propTypes);
+	
+	  exportedIcon.displayName = component.name;
+	  return exportedIcon;
+	};
+
+/***/ },
+/* 266 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+	
+	exports.default = Dialog;
+	
+	var _react = __webpack_require__(5);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _bind = __webpack_require__(254);
+	
+	var _bind2 = _interopRequireDefault(_bind);
+	
+	var _dialog = __webpack_require__(267);
+	
+	var _dialog2 = _interopRequireDefault(_dialog);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+	
+	var classNames = _bind2.default.bind(_dialog2.default);
+	
+	function Dialog(_ref) {
+	  var children = _ref.children;
+	  var className = _ref.className;
+	
+	  var props = _objectWithoutProperties(_ref, ['children', 'className']);
+	
+	  return _react2.default.createElement(
+	    'div',
+	    _extends({ className: classNames('cui__dialog', className) }, props),
+	    children
+	  );
+	}
+	
+	Dialog.propTypes = {
+	  children: _react.PropTypes.node,
+	  className: _react.PropTypes.string
+	};
+	
+	Dialog.Icon = function (_ref2) {
+	  var children = _ref2.children;
+	  var className = _ref2.className;
+	
+	  var props = _objectWithoutProperties(_ref2, ['children', 'className']);
+	
+	  return _react2.default.createElement(
+	    'div',
+	    _extends({ className: classNames('cui__dialog__icon', className) }, props),
+	    children
+	  );
+	};
+	
+	Dialog.Icon.propTypes = {
+	  children: _react.PropTypes.node,
+	  className: _react.PropTypes.string
+	};
+	
+	Dialog.Content = function (_ref3) {
+	  var children = _ref3.children;
+	  var className = _ref3.className;
+	
+	  var props = _objectWithoutProperties(_ref3, ['children', 'className']);
+	
+	  return _react2.default.createElement(
+	    'div',
+	    _extends({ className: classNames('cui__dialog__content', className) }, props),
+	    _react2.default.createElement(
+	      'div',
+	      { className: classNames('cui__dialog__content--inner') },
+	      children
+	    )
+	  );
+	};
+	
+	Dialog.Content.propTypes = {
+	  children: _react.PropTypes.node,
+	  className: _react.PropTypes.string
+	};
+	
+	Dialog.Footer = function (_ref4) {
+	  var children = _ref4.children;
+	  var className = _ref4.className;
+	
+	  var props = _objectWithoutProperties(_ref4, ['children', 'className']);
+	
+	  return _react2.default.createElement(
+	    'div',
+	    _extends({
+	      className: classNames('cui__dialog__footer', className) }, props),
+	    _react2.default.createElement(
+	      'div',
+	      {
+	        className: classNames('cui__dialog__footer--inner') },
+	      children
+	    )
+	  );
+	};
+	
+	Dialog.Footer.propTypes = {
+	  children: _react.PropTypes.node,
+	  className: _react.PropTypes.string
+	};
+
+/***/ },
+/* 267 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(268);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../../../css-loader/index.js?modules,localIdentName=[local]!./../../../../sass-loader/index.js!./dialog.scss", function() {
+				var newContent = require("!!./../../../../css-loader/index.js?modules,localIdentName=[local]!./../../../../sass-loader/index.js!./dialog.scss");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 268 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "@keyframes spin {\n  to {\n    transform: rotate(1turn); } }\n\n/*******************************************************************************\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie { // Targets all IE browsers\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie(8) { // Targets only IE 8\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie((8,9)) { // Targets both IE 8 and IE 9\n        padding-top: 22px;\n    }\n}\n*******************************************************************************/\n.cui__dialog {\n  box-sizing: border-box;\n  display: table;\n  height: 100%;\n  margin: 0 auto;\n  padding: 20px;\n  position: relative;\n  width: 100%; }\n  @media screen and (min-width: 319px) {\n    .cui__dialog {\n      box-sizing: border-box;\n      display: table;\n      height: 100%;\n      margin: 0 auto;\n      padding: 30px;\n      position: relative;\n      width: 100%; } }\n\n.cui__dialog__icon {\n  position: absolute;\n  display: block;\n  right: 15px;\n  top: 15px; }\n  @media screen and (min-width: 319px) {\n    .cui__dialog__icon {\n      position: absolute;\n      display: block;\n      right: 25px;\n      top: 25px; } }\n\n.cui__dialog__content {\n  display: table-row; }\n  .cui__dialog__content--inner {\n    display: table-cell;\n    height: 100%;\n    vertical-align: middle; }\n  @media screen and (min-width: 319px) {\n    .cui__dialog__content {\n      display: table-row; }\n      .cui__dialog__content--inner {\n        display: table-cell;\n        height: 100%;\n        vertical-align: middle; } }\n\n.cui__dialog__footer {\n  display: table-row; }\n  .cui__dialog__footer--inner {\n    display: table-cell; }\n  @media screen and (min-width: 319px) {\n    .cui__dialog__footer {\n      display: table-row; }\n      .cui__dialog__footer--inner {\n        display: table-cell; } }\n", ""]);
+	
+	// exports
+	exports.locals = {
+		"cui__dialog": "cui__dialog",
+		"cui__dialog__icon": "cui__dialog__icon",
+		"cui__dialog__content": "cui__dialog__content",
+		"cui__dialog__content--inner": "cui__dialog__content--inner",
+		"cui__dialog__footer": "cui__dialog__footer",
+		"cui__dialog__footer--inner": "cui__dialog__footer--inner",
+		"spin": "spin"
+	};
+
+/***/ },
+/* 269 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+	
+	// load the styles
+	var content = __webpack_require__(270);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(4)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!./../../node_modules/css-loader/index.js?modules!./styles.css", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js?modules!./styles.css");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 270 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, "._2GWPvbCkpOlpjjrLLd5OFn {\n  text-align: center;\n}\n", ""]);
+	
+	// exports
+	exports.locals = {
+		"content": "_2GWPvbCkpOlpjjrLLd5OFn"
+	};
+
+/***/ },
+/* 271 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _react = __webpack_require__(5);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _Text = __webpack_require__(253);
+	
+	var _Button = __webpack_require__(272);
+	
+	var _Button2 = _interopRequireDefault(_Button);
+	
+	var _styles = __webpack_require__(279);
+	
+	var _styles2 = _interopRequireDefault(_styles);
+	
+	var _BankID = __webpack_require__(281);
 	
 	var _BankID2 = _interopRequireDefault(_BankID);
 	
 	var _reactRedux = __webpack_require__(163);
 	
+	var _index = __webpack_require__(263);
+	
+	var _index2 = _interopRequireDefault(_index);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var OpenBankID = function OpenBankID() {
 	  return _react2.default.createElement(
-	    'main',
-	    { className: _styles2.default.main },
+	    _index2.default,
+	    null,
 	    _react2.default.createElement(_BankID2.default, null),
 	    _react2.default.createElement(
 	      _Text.PrimaryTitle,
@@ -28011,7 +28224,7 @@
 	})(OpenBankID);
 
 /***/ },
-/* 268 */
+/* 272 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28028,11 +28241,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _bind = __webpack_require__(256);
+	var _bind = __webpack_require__(254);
 	
 	var _bind2 = _interopRequireDefault(_bind);
 	
-	var _button = __webpack_require__(269);
+	var _button = __webpack_require__(273);
 	
 	var _button2 = _interopRequireDefault(_button);
 	
@@ -28088,13 +28301,13 @@
 	};
 
 /***/ },
-/* 269 */
+/* 273 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(270);
+	var content = __webpack_require__(274);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -28114,7 +28327,7 @@
 	}
 
 /***/ },
-/* 270 */
+/* 274 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -28122,7 +28335,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes spin {\n  to {\n    transform: rotate(1turn); } }\n\n/*******************************************************************************\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie { // Targets all IE browsers\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie(8) { // Targets only IE 8\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie((8,9)) { // Targets both IE 8 and IE 9\n        padding-top: 22px;\n    }\n}\n*******************************************************************************/\n.cui__button--primary {\n  font-size: 14px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  appearance: none;\n  background: #0074c8;\n  border-radius: 5px;\n  border: 1px solid #0074c8;\n  box-sizing: border-box;\n  color: white;\n  cursor: pointer;\n  line-height: 48px;\n  outline: none;\n  padding: 0 45px;\n  text-align: center;\n  text-decoration: none;\n  -webkit-transition: all .2s ease;\n  transition: all .2s ease;\n  vertical-align: top; }\n  .cui__button--primary.small {\n    font-size: 14px;\n    line-height: 33px;\n    padding: 0 28px; }\n  .cui__button--primary.big {\n    letter-spacing: 0.05px;\n    line-height: 58px;\n    padding: 0 70px;\n    text-transform: uppercase; }\n  .cui__button--primary.right {\n    width: 100%; }\n    @media screen and (min-width: 569px) {\n      .cui__button--primary.right {\n        float: right;\n        margin-left: 20px;\n        width: auto; } }\n  .cui__button--primary.left {\n    float: left; }\n  .cui__button--primary.has-price {\n    padding: 0 20px;\n    text-align: left; }\n  .cui__button--primary:hover, .cui__button--primary:focus {\n    background-color: #0065ad;\n    border-color: #0065ad; }\n  .cui__button--primary:active {\n    background-color: #005694;\n    border-color: #005694; }\n  .cui__button--primary.is-disabled {\n    -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)\";\n    opacity: 0.2;\n    cursor: default;\n    pointer-events: none; }\n    .cui__button--primary.is-disabled:hover {\n      background: #0074c8; }\n    .cui__button--primary.is-disabled:active {\n      background: #0074c8; }\n    .cui__button--primary.is-disabled:focus {\n      background: #0074c8; }\n  .cui__button--primary.is-loading {\n    cursor: progress; }\n    .cui__button--primary.is-loading:hover {\n      background: #0074c8; }\n    .cui__button--primary.is-loading:active {\n      background: #0074c8; }\n    .cui__button--primary.is-loading:focus {\n      background: #0074c8; }\n  .cui__button--primary .cui__button__price {\n    display: inline-block;\n    float: right;\n    margin-left: 20px;\n    padding-left: 20px;\n    border-left: 1px solid rgba(255, 255, 255, 0.1); }\n  .cui__button--primary.is-loading:after {\n    background-image: url(" + __webpack_require__(271) + ");\n    animation: spin .8s linear infinite;\n    display: inline-block;\n    font-size: 0;\n    height: 20px;\n    vertical-align: text-bottom;\n    width: 20px;\n    content: ''; }\n    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n      .cui__button--primary.is-loading:after {\n        background-image: url(" + __webpack_require__(272) + ");\n        background-size: 20px 20px; } }\n    .ie8 .cui__button--primary.is-loading:after, .cui__browser--ie8 .cui__button--primary.is-loading:after, .ie9 .cui__button--primary.is-loading:after, .cui__browser--ie9 .cui__button--primary.is-loading:after {\n      font-size: rem2px(15px); }\n    .cui__button--primary.is-loading:after:before {\n      content: url(" + __webpack_require__(271) + ");\n      display: none;\n      height: 0;\n      width: 0; }\n      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n        .cui__button--primary.is-loading:after:before {\n          content: url(" + __webpack_require__(272) + "); } }\n\n.cui__button--secondary {\n  font-size: 14px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  appearance: none;\n  background: white;\n  border-radius: 5px;\n  border: 1px solid #0074c8;\n  box-sizing: border-box;\n  color: #0074c8;\n  cursor: pointer;\n  line-height: 48px;\n  outline: none;\n  padding: 0 45px;\n  text-align: center;\n  text-decoration: none;\n  -webkit-transition: all .2s ease;\n  transition: all .2s ease;\n  vertical-align: top; }\n  .cui__button--secondary.small {\n    font-size: 14px;\n    line-height: 33px;\n    padding: 0 28px; }\n  .cui__button--secondary.big {\n    letter-spacing: 0.05px;\n    line-height: 58px;\n    padding: 0 70px;\n    text-transform: uppercase; }\n  .cui__button--secondary.right {\n    width: 100%; }\n    @media screen and (min-width: 569px) {\n      .cui__button--secondary.right {\n        float: right;\n        margin-left: 20px;\n        width: auto; } }\n  .cui__button--secondary.left {\n    float: left; }\n  .cui__button--secondary.has-price {\n    padding: 0 20px;\n    text-align: left; }\n  .cui__button--secondary:hover, .cui__button--secondary:focus {\n    background-color: #0065ad;\n    border-color: #0065ad; }\n  .cui__button--secondary:active {\n    background-color: #005694;\n    border-color: #005694; }\n  .cui__button--secondary.is-disabled {\n    -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)\";\n    opacity: 0.2;\n    cursor: default;\n    pointer-events: none; }\n    .cui__button--secondary.is-disabled:hover {\n      background: white; }\n    .cui__button--secondary.is-disabled:active {\n      background: white; }\n    .cui__button--secondary.is-disabled:focus {\n      background: white; }\n  .cui__button--secondary.is-loading {\n    cursor: progress; }\n    .cui__button--secondary.is-loading:hover {\n      background: white; }\n    .cui__button--secondary.is-loading:active {\n      background: white; }\n    .cui__button--secondary.is-loading:focus {\n      background: white; }\n  .cui__button--secondary .cui__button__price {\n    display: inline-block;\n    float: right;\n    margin-left: 20px;\n    padding-left: 20px;\n    border-left: 1px solid rgba(0, 116, 200, 0.1); }\n  .cui__button--secondary.is-loading:after {\n    background-image: url(" + __webpack_require__(273) + ");\n    animation: spin .8s linear infinite;\n    display: inline-block;\n    font-size: 0;\n    height: 20px;\n    vertical-align: text-bottom;\n    width: 20px;\n    content: ''; }\n    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n      .cui__button--secondary.is-loading:after {\n        background-image: url(" + __webpack_require__(274) + ");\n        background-size: 20px 20px; } }\n    .ie8 .cui__button--secondary.is-loading:after, .cui__browser--ie8 .cui__button--secondary.is-loading:after, .ie9 .cui__button--secondary.is-loading:after, .cui__browser--ie9 .cui__button--secondary.is-loading:after {\n      font-size: rem2px(15px); }\n    .cui__button--secondary.is-loading:after:before {\n      content: url(" + __webpack_require__(273) + ");\n      display: none;\n      height: 0;\n      width: 0; }\n      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n        .cui__button--secondary.is-loading:after:before {\n          content: url(" + __webpack_require__(274) + "); } }\n  .cui__button--secondary:hover, .cui__button--secondary:focus {\n    background: #0074c8;\n    color: #fff; }\n    .cui__button--secondary:hover.is-disabled, .cui__button--secondary:focus.is-disabled {\n      background: #fff;\n      color: #0074c8; }\n  .cui__button--secondary:active {\n    background: #005694;\n    color: #fff; }\n  .cui__button--primary.right + .cui__button--secondary.right {\n    margin-top: 20px; }\n    @media screen and (min-width: 569px) {\n      .cui__button--primary.right + .cui__button--secondary.right {\n        margin-top: 0; } }\n\n.cui__button__menu {\n  padding-bottom: 20px; }\n  .cui__button__menu::after {\n    clear: both;\n    content: '';\n    display: block; }\n", ""]);
+	exports.push([module.id, "@keyframes spin {\n  to {\n    transform: rotate(1turn); } }\n\n/*******************************************************************************\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie { // Targets all IE browsers\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie(8) { // Targets only IE 8\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie((8,9)) { // Targets both IE 8 and IE 9\n        padding-top: 22px;\n    }\n}\n*******************************************************************************/\n.cui__button--primary {\n  font-size: 14px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  appearance: none;\n  background: #0074c8;\n  border-radius: 5px;\n  border: 1px solid #0074c8;\n  box-sizing: border-box;\n  color: white;\n  cursor: pointer;\n  line-height: 48px;\n  outline: none;\n  padding: 0 45px;\n  text-align: center;\n  text-decoration: none;\n  -webkit-transition: all .2s ease;\n  transition: all .2s ease;\n  vertical-align: top; }\n  .cui__button--primary.small {\n    font-size: 14px;\n    line-height: 33px;\n    padding: 0 28px; }\n  .cui__button--primary.big {\n    letter-spacing: 0.05px;\n    line-height: 58px;\n    padding: 0 70px;\n    text-transform: uppercase; }\n  .cui__button--primary.right {\n    width: 100%; }\n    @media screen and (min-width: 569px) {\n      .cui__button--primary.right {\n        float: right;\n        margin-left: 20px;\n        width: auto; } }\n  .cui__button--primary.left {\n    float: left; }\n  .cui__button--primary.has-price {\n    padding: 0 20px;\n    text-align: left; }\n  .cui__button--primary:hover, .cui__button--primary:focus {\n    background-color: #0065ad;\n    border-color: #0065ad; }\n  .cui__button--primary:active {\n    background-color: #005694;\n    border-color: #005694; }\n  .cui__button--primary.is-disabled {\n    -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)\";\n    opacity: 0.2;\n    cursor: default;\n    pointer-events: none; }\n    .cui__button--primary.is-disabled:hover {\n      background: #0074c8; }\n    .cui__button--primary.is-disabled:active {\n      background: #0074c8; }\n    .cui__button--primary.is-disabled:focus {\n      background: #0074c8; }\n  .cui__button--primary.is-loading {\n    cursor: progress; }\n    .cui__button--primary.is-loading:hover {\n      background: #0074c8; }\n    .cui__button--primary.is-loading:active {\n      background: #0074c8; }\n    .cui__button--primary.is-loading:focus {\n      background: #0074c8; }\n  .cui__button--primary .cui__button__price {\n    display: inline-block;\n    float: right;\n    margin-left: 20px;\n    padding-left: 20px;\n    border-left: 1px solid rgba(255, 255, 255, 0.1); }\n  .cui__button--primary.is-loading:after {\n    background-image: url(" + __webpack_require__(275) + ");\n    animation: spin .8s linear infinite;\n    display: inline-block;\n    font-size: 0;\n    height: 20px;\n    vertical-align: text-bottom;\n    width: 20px;\n    content: ''; }\n    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n      .cui__button--primary.is-loading:after {\n        background-image: url(" + __webpack_require__(276) + ");\n        background-size: 20px 20px; } }\n    .ie8 .cui__button--primary.is-loading:after, .cui__browser--ie8 .cui__button--primary.is-loading:after, .ie9 .cui__button--primary.is-loading:after, .cui__browser--ie9 .cui__button--primary.is-loading:after {\n      font-size: rem2px(15px); }\n    .cui__button--primary.is-loading:after:before {\n      content: url(" + __webpack_require__(275) + ");\n      display: none;\n      height: 0;\n      width: 0; }\n      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n        .cui__button--primary.is-loading:after:before {\n          content: url(" + __webpack_require__(276) + "); } }\n\n.cui__button--secondary {\n  font-size: 14px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  appearance: none;\n  background: white;\n  border-radius: 5px;\n  border: 1px solid #0074c8;\n  box-sizing: border-box;\n  color: #0074c8;\n  cursor: pointer;\n  line-height: 48px;\n  outline: none;\n  padding: 0 45px;\n  text-align: center;\n  text-decoration: none;\n  -webkit-transition: all .2s ease;\n  transition: all .2s ease;\n  vertical-align: top; }\n  .cui__button--secondary.small {\n    font-size: 14px;\n    line-height: 33px;\n    padding: 0 28px; }\n  .cui__button--secondary.big {\n    letter-spacing: 0.05px;\n    line-height: 58px;\n    padding: 0 70px;\n    text-transform: uppercase; }\n  .cui__button--secondary.right {\n    width: 100%; }\n    @media screen and (min-width: 569px) {\n      .cui__button--secondary.right {\n        float: right;\n        margin-left: 20px;\n        width: auto; } }\n  .cui__button--secondary.left {\n    float: left; }\n  .cui__button--secondary.has-price {\n    padding: 0 20px;\n    text-align: left; }\n  .cui__button--secondary:hover, .cui__button--secondary:focus {\n    background-color: #0065ad;\n    border-color: #0065ad; }\n  .cui__button--secondary:active {\n    background-color: #005694;\n    border-color: #005694; }\n  .cui__button--secondary.is-disabled {\n    -ms-filter: \"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)\";\n    opacity: 0.2;\n    cursor: default;\n    pointer-events: none; }\n    .cui__button--secondary.is-disabled:hover {\n      background: white; }\n    .cui__button--secondary.is-disabled:active {\n      background: white; }\n    .cui__button--secondary.is-disabled:focus {\n      background: white; }\n  .cui__button--secondary.is-loading {\n    cursor: progress; }\n    .cui__button--secondary.is-loading:hover {\n      background: white; }\n    .cui__button--secondary.is-loading:active {\n      background: white; }\n    .cui__button--secondary.is-loading:focus {\n      background: white; }\n  .cui__button--secondary .cui__button__price {\n    display: inline-block;\n    float: right;\n    margin-left: 20px;\n    padding-left: 20px;\n    border-left: 1px solid rgba(0, 116, 200, 0.1); }\n  .cui__button--secondary.is-loading:after {\n    background-image: url(" + __webpack_require__(277) + ");\n    animation: spin .8s linear infinite;\n    display: inline-block;\n    font-size: 0;\n    height: 20px;\n    vertical-align: text-bottom;\n    width: 20px;\n    content: ''; }\n    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n      .cui__button--secondary.is-loading:after {\n        background-image: url(" + __webpack_require__(278) + ");\n        background-size: 20px 20px; } }\n    .ie8 .cui__button--secondary.is-loading:after, .cui__browser--ie8 .cui__button--secondary.is-loading:after, .ie9 .cui__button--secondary.is-loading:after, .cui__browser--ie9 .cui__button--secondary.is-loading:after {\n      font-size: rem2px(15px); }\n    .cui__button--secondary.is-loading:after:before {\n      content: url(" + __webpack_require__(277) + ");\n      display: none;\n      height: 0;\n      width: 0; }\n      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n        .cui__button--secondary.is-loading:after:before {\n          content: url(" + __webpack_require__(278) + "); } }\n  .cui__button--secondary:hover, .cui__button--secondary:focus {\n    background: #0074c8;\n    color: #fff; }\n    .cui__button--secondary:hover.is-disabled, .cui__button--secondary:focus.is-disabled {\n      background: #fff;\n      color: #0074c8; }\n  .cui__button--secondary:active {\n    background: #005694;\n    color: #fff; }\n  .cui__button--primary.right + .cui__button--secondary.right {\n    margin-top: 20px; }\n    @media screen and (min-width: 569px) {\n      .cui__button--primary.right + .cui__button--secondary.right {\n        margin-top: 0; } }\n\n.cui__button__menu {\n  padding-bottom: 20px; }\n  .cui__button__menu::after {\n    clear: both;\n    content: '';\n    display: block; }\n", ""]);
 	
 	// exports
 	exports.locals = {
@@ -28145,37 +28358,37 @@
 	};
 
 /***/ },
-/* 271 */
+/* 275 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "3aa7c6452b046fcb29273e8011f0a803.png";
 
 /***/ },
-/* 272 */
+/* 276 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "7bb32a857576ce7e3ab5764f9140336e.png";
 
 /***/ },
-/* 273 */
+/* 277 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "d2260af736fb9b1ae686bb1fcc554354.png";
 
 /***/ },
-/* 274 */
+/* 278 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "cbe6778e6c23d2dcd1be1cfcf10dfe9f.png";
 
 /***/ },
-/* 275 */
+/* 279 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(276);
+	var content = __webpack_require__(280);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -28195,7 +28408,7 @@
 	}
 
 /***/ },
-/* 276 */
+/* 280 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -28212,7 +28425,7 @@
 	};
 
 /***/ },
-/* 277 */
+/* 281 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28275,7 +28488,7 @@
 	};
 
 /***/ },
-/* 278 */
+/* 282 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28288,30 +28501,34 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Text = __webpack_require__(255);
+	var _Text = __webpack_require__(253);
 	
-	var _Button = __webpack_require__(268);
+	var _Button = __webpack_require__(272);
 	
 	var _Button2 = _interopRequireDefault(_Button);
 	
-	var _styles = __webpack_require__(279);
+	var _styles = __webpack_require__(283);
 	
 	var _styles2 = _interopRequireDefault(_styles);
 	
-	var _Bank = __webpack_require__(281);
+	var _Bank = __webpack_require__(285);
 	
 	var _Bank2 = _interopRequireDefault(_Bank);
 	
-	var _LinkList = __webpack_require__(264);
+	var _LinkList = __webpack_require__(260);
 	
 	var _LinkList2 = _interopRequireDefault(_LinkList);
+	
+	var _index = __webpack_require__(263);
+	
+	var _index2 = _interopRequireDefault(_index);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = function () {
 	  return _react2.default.createElement(
-	    'main',
-	    { className: _styles2.default.main },
+	    _index2.default,
+	    null,
 	    _react2.default.createElement(_Bank2.default, null),
 	    _react2.default.createElement(
 	      _Text.PrimaryTitle,
@@ -28330,13 +28547,13 @@
 	};
 
 /***/ },
-/* 279 */
+/* 283 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(280);
+	var content = __webpack_require__(284);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -28356,7 +28573,7 @@
 	}
 
 /***/ },
-/* 280 */
+/* 284 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -28373,7 +28590,7 @@
 	};
 
 /***/ },
-/* 281 */
+/* 285 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28420,7 +28637,7 @@
 	};
 
 /***/ },
-/* 282 */
+/* 286 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28433,26 +28650,30 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Text = __webpack_require__(255);
+	var _Text = __webpack_require__(253);
 	
-	var _Button = __webpack_require__(268);
+	var _Button = __webpack_require__(272);
 	
 	var _Button2 = _interopRequireDefault(_Button);
 	
-	var _Link = __webpack_require__(259);
+	var _Link = __webpack_require__(257);
 	
 	var _Link2 = _interopRequireDefault(_Link);
 	
-	var _styles = __webpack_require__(283);
+	var _styles = __webpack_require__(287);
 	
 	var _styles2 = _interopRequireDefault(_styles);
+	
+	var _index = __webpack_require__(263);
+	
+	var _index2 = _interopRequireDefault(_index);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	exports.default = function () {
 	  return _react2.default.createElement(
-	    'main',
-	    { className: _styles2.default.main },
+	    _index2.default,
+	    null,
 	    _react2.default.createElement(
 	      _Text.PrimaryTitle,
 	      { blue: true },
@@ -28518,13 +28739,13 @@
 	};
 
 /***/ },
-/* 283 */
+/* 287 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(284);
+	var content = __webpack_require__(288);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -28544,7 +28765,7 @@
 	}
 
 /***/ },
-/* 284 */
+/* 288 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -28565,7 +28786,7 @@
 	};
 
 /***/ },
-/* 285 */
+/* 289 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28617,7 +28838,7 @@
 	};
 
 /***/ },
-/* 286 */
+/* 290 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28630,43 +28851,47 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Text = __webpack_require__(255);
+	var _Text = __webpack_require__(253);
 	
-	var _Button = __webpack_require__(268);
+	var _Button = __webpack_require__(272);
 	
 	var _Button2 = _interopRequireDefault(_Button);
 	
-	var _Field = __webpack_require__(287);
+	var _Field = __webpack_require__(291);
 	
 	var _Field2 = _interopRequireDefault(_Field);
 	
-	var _styles = __webpack_require__(290);
+	var _styles = __webpack_require__(294);
 	
 	var _styles2 = _interopRequireDefault(_styles);
 	
-	var _UserDetails = __webpack_require__(292);
+	var _UserDetails = __webpack_require__(296);
 	
 	var _UserDetails2 = _interopRequireDefault(_UserDetails);
 	
-	var _Mail = __webpack_require__(293);
+	var _Mail = __webpack_require__(297);
 	
 	var _Mail2 = _interopRequireDefault(_Mail);
 	
-	var _Lock = __webpack_require__(296);
+	var _Lock = __webpack_require__(300);
 	
 	var _Lock2 = _interopRequireDefault(_Lock);
 	
-	var _actions = __webpack_require__(297);
+	var _actions = __webpack_require__(301);
 	
 	var _reactRedux = __webpack_require__(163);
+	
+	var _index = __webpack_require__(263);
+	
+	var _index2 = _interopRequireDefault(_index);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var Details = function Details(_ref) {
 	  var error = _ref.error;
 	  return _react2.default.createElement(
-	    'main',
-	    { className: _styles2.default.main },
+	    _index2.default,
+	    null,
 	    _react2.default.createElement(_UserDetails2.default, null),
 	    _react2.default.createElement(
 	      _Text.PrimaryTitle,
@@ -28707,7 +28932,7 @@
 	})(Details);
 
 /***/ },
-/* 287 */
+/* 291 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28722,11 +28947,11 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _bind = __webpack_require__(256);
+	var _bind = __webpack_require__(254);
 	
 	var _bind2 = _interopRequireDefault(_bind);
 	
-	var _field = __webpack_require__(288);
+	var _field = __webpack_require__(292);
 	
 	var _field2 = _interopRequireDefault(_field);
 	
@@ -28889,13 +29114,13 @@
 	};
 
 /***/ },
-/* 288 */
+/* 292 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(289);
+	var content = __webpack_require__(293);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -28915,7 +29140,7 @@
 	}
 
 /***/ },
-/* 289 */
+/* 293 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -28923,7 +29148,7 @@
 	
 	
 	// module
-	exports.push([module.id, "@keyframes spin {\n  to {\n    transform: rotate(1turn); } }\n\n/*******************************************************************************\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie { // Targets all IE browsers\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie(8) { // Targets only IE 8\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie((8,9)) { // Targets both IE 8 and IE 9\n        padding-top: 22px;\n    }\n}\n*******************************************************************************/\n.cui__field, .cui__field--icon {\n  border: 1px solid #cbcbcd;\n  border-radius: 5px;\n  box-sizing: border-box;\n  clear: both;\n  display: block;\n  height: 51px;\n  margin-bottom: -1px;\n  position: relative;\n  text-align: left;\n  -webkit-transition: all .2s ease;\n  transition: all .2s ease; }\n  .cui__field.square, .square.cui__field--icon {\n    border-radius: 0; }\n  @media screen and (min-width: 569px) {\n    .cui__field.eighty, .eighty.cui__field--icon {\n      width: 80%;\n      clear: none;\n      float: left; } }\n  .cui__field.eighty.non-responsive, .eighty.non-responsive.cui__field--icon {\n    width: 80%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.three-quarters, .three-quarters.cui__field--icon {\n      width: 75%;\n      clear: none;\n      float: left; } }\n  .cui__field.three-quarters.non-responsive, .three-quarters.non-responsive.cui__field--icon {\n    width: 75%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.two-thirds, .two-thirds.cui__field--icon {\n      width: 66.66666%;\n      clear: none;\n      float: left; } }\n  .cui__field.two-thirds.non-responsive, .two-thirds.non-responsive.cui__field--icon {\n    width: 66.66666%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.half, .half.cui__field--icon {\n      width: 50%;\n      clear: none;\n      float: left; } }\n  .cui__field.half.non-responsive, .half.non-responsive.cui__field--icon {\n    width: 50%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.forty, .forty.cui__field--icon {\n      width: 40%;\n      clear: none;\n      float: left; } }\n  .cui__field.forty.non-responsive, .forty.non-responsive.cui__field--icon {\n    width: 40%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.third, .third.cui__field--icon {\n      width: 33.33333%;\n      clear: none;\n      float: left; } }\n  .cui__field.third.non-responsive, .third.non-responsive.cui__field--icon {\n    width: 33.33333%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.quarter, .quarter.cui__field--icon {\n      width: 25%;\n      clear: none;\n      float: left; } }\n  .cui__field.quarter.non-responsive, .quarter.non-responsive.cui__field--icon {\n    width: 25%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.twenty, .twenty.cui__field--icon {\n      width: 20%;\n      clear: none;\n      float: left; } }\n  .cui__field.twenty.non-responsive, .twenty.non-responsive.cui__field--icon {\n    width: 20%;\n    clear: none;\n    float: left; }\n  .cui__field.left, .left.cui__field--icon {\n    border-bottom-right-radius: 0;\n    border-top-right-radius: 0; }\n  .cui__field.center, .center.cui__field--icon {\n    border-radius: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.center, .center.cui__field--icon {\n        margin-left: -1px; } }\n    .cui__field.center.non-responsive, .center.non-responsive.cui__field--icon {\n      margin-left: -1px; }\n      .ie8 .cui__field.center.non-responsive, .ie8 .center.non-responsive.cui__field--icon {\n        margin-left: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.eighty, .center.eighty.cui__field--icon {\n        width: calc(80% + 1px); } }\n    .cui__field.center.eighty.non-responsive, .center.eighty.non-responsive.cui__field--icon {\n      width: calc(80% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.three-quarters, .center.three-quarters.cui__field--icon {\n        width: calc(75% + 1px); } }\n    .cui__field.center.three-quarters.non-responsive, .center.three-quarters.non-responsive.cui__field--icon {\n      width: calc(75% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.two-thirds, .center.two-thirds.cui__field--icon {\n        width: calc(66.66666% + 1px); } }\n    .cui__field.center.two-thirds.non-responsive, .center.two-thirds.non-responsive.cui__field--icon {\n      width: calc(66.66666% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.half, .center.half.cui__field--icon {\n        width: calc(50% + 1px); } }\n    .cui__field.center.half.non-responsive, .center.half.non-responsive.cui__field--icon {\n      width: calc(50% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.forty, .center.forty.cui__field--icon {\n        width: calc(40% + 1px); } }\n    .cui__field.center.forty.non-responsive, .center.forty.non-responsive.cui__field--icon {\n      width: calc(40% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.third, .center.third.cui__field--icon {\n        width: calc(33.33333% + 1px); } }\n    .cui__field.center.third.non-responsive, .center.third.non-responsive.cui__field--icon {\n      width: calc(33.33333% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.quarter, .center.quarter.cui__field--icon {\n        width: calc(25% + 1px); } }\n    .cui__field.center.quarter.non-responsive, .center.quarter.non-responsive.cui__field--icon {\n      width: calc(25% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.twenty, .center.twenty.cui__field--icon {\n        width: calc(20% + 1px); } }\n    .cui__field.center.twenty.non-responsive, .center.twenty.non-responsive.cui__field--icon {\n      width: calc(20% + 1px); }\n    .cui__field.center::after, .center.cui__field--icon::after {\n      clear: both;\n      content: '';\n      display: block; }\n  .cui__field.right, .right.cui__field--icon {\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.right, .right.cui__field--icon {\n        margin-left: -1px; } }\n    .cui__field.right.non-responsive, .right.non-responsive.cui__field--icon {\n      margin-left: -1px; }\n      .ie8 .cui__field.right.non-responsive, .ie8 .right.non-responsive.cui__field--icon {\n        margin-left: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.eighty, .right.eighty.cui__field--icon {\n        width: calc(80% + 1px); } }\n    .cui__field.right.eighty.non-responsive, .right.eighty.non-responsive.cui__field--icon {\n      width: calc(80% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.three-quarters, .right.three-quarters.cui__field--icon {\n        width: calc(75% + 1px); } }\n    .cui__field.right.three-quarters.non-responsive, .right.three-quarters.non-responsive.cui__field--icon {\n      width: calc(75% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.two-thirds, .right.two-thirds.cui__field--icon {\n        width: calc(66.66666% + 1px); } }\n    .cui__field.right.two-thirds.non-responsive, .right.two-thirds.non-responsive.cui__field--icon {\n      width: calc(66.66666% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.half, .right.half.cui__field--icon {\n        width: calc(50% + 1px); } }\n    .cui__field.right.half.non-responsive, .right.half.non-responsive.cui__field--icon {\n      width: calc(50% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.forty, .right.forty.cui__field--icon {\n        width: calc(40% + 1px); } }\n    .cui__field.right.forty.non-responsive, .right.forty.non-responsive.cui__field--icon {\n      width: calc(40% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.third, .right.third.cui__field--icon {\n        width: calc(33.33333% + 1px); } }\n    .cui__field.right.third.non-responsive, .right.third.non-responsive.cui__field--icon {\n      width: calc(33.33333% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.quarter, .right.quarter.cui__field--icon {\n        width: calc(25% + 1px); } }\n    .cui__field.right.quarter.non-responsive, .right.quarter.non-responsive.cui__field--icon {\n      width: calc(25% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.twenty, .right.twenty.cui__field--icon {\n        width: calc(20% + 1px); } }\n    .cui__field.right.twenty.non-responsive, .right.twenty.non-responsive.cui__field--icon {\n      width: calc(20% + 1px); }\n    .cui__field.right::after, .right.cui__field--icon::after {\n      clear: both;\n      content: '';\n      display: block; }\n  .cui__field.top, .top.cui__field--icon {\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0; }\n  .cui__field.top-left, .top-left.cui__field--icon {\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-left, .top-left.cui__field--icon {\n        border-top-right-radius: 0; } }\n    .cui__field.top-left.non-responsive, .top-left.non-responsive.cui__field--icon {\n      border-top-right-radius: 0; }\n  .cui__field.top-right, .top-right.cui__field--icon {\n    border-radius: 0;\n    clear: right; }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right, .top-right.cui__field--icon {\n        margin-left: -1px; } }\n    .cui__field.top-right.non-responsive, .top-right.non-responsive.cui__field--icon {\n      margin-left: -1px; }\n      .ie8 .cui__field.top-right.non-responsive, .ie8 .top-right.non-responsive.cui__field--icon {\n        margin-left: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.eighty, .top-right.eighty.cui__field--icon {\n        width: calc(80% + 1px); } }\n    .cui__field.top-right.eighty.non-responsive, .top-right.eighty.non-responsive.cui__field--icon {\n      width: calc(80% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.three-quarters, .top-right.three-quarters.cui__field--icon {\n        width: calc(75% + 1px); } }\n    .cui__field.top-right.three-quarters.non-responsive, .top-right.three-quarters.non-responsive.cui__field--icon {\n      width: calc(75% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.two-thirds, .top-right.two-thirds.cui__field--icon {\n        width: calc(66.66666% + 1px); } }\n    .cui__field.top-right.two-thirds.non-responsive, .top-right.two-thirds.non-responsive.cui__field--icon {\n      width: calc(66.66666% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.half, .top-right.half.cui__field--icon {\n        width: calc(50% + 1px); } }\n    .cui__field.top-right.half.non-responsive, .top-right.half.non-responsive.cui__field--icon {\n      width: calc(50% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.forty, .top-right.forty.cui__field--icon {\n        width: calc(40% + 1px); } }\n    .cui__field.top-right.forty.non-responsive, .top-right.forty.non-responsive.cui__field--icon {\n      width: calc(40% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.third, .top-right.third.cui__field--icon {\n        width: calc(33.33333% + 1px); } }\n    .cui__field.top-right.third.non-responsive, .top-right.third.non-responsive.cui__field--icon {\n      width: calc(33.33333% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.quarter, .top-right.quarter.cui__field--icon {\n        width: calc(25% + 1px); } }\n    .cui__field.top-right.quarter.non-responsive, .top-right.quarter.non-responsive.cui__field--icon {\n      width: calc(25% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.twenty, .top-right.twenty.cui__field--icon {\n        width: calc(20% + 1px); } }\n    .cui__field.top-right.twenty.non-responsive, .top-right.twenty.non-responsive.cui__field--icon {\n      width: calc(20% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right, .top-right.cui__field--icon {\n        border-top-right-radius: 5px; } }\n    .cui__field.top-right.non-responsive, .top-right.non-responsive.cui__field--icon {\n      border-top-right-radius: 5px; }\n  .cui__field.bottom, .bottom.cui__field--icon {\n    border-top-left-radius: 0;\n    border-top-right-radius: 0; }\n  .cui__field.bottom-left, .bottom-left.cui__field--icon {\n    border-radius: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-left, .bottom-left.cui__field--icon {\n        border-bottom-left-radius: 5px; } }\n    .cui__field.bottom-left.non-responsive, .bottom-left.non-responsive.cui__field--icon {\n      border-bottom-left-radius: 5px; }\n  .cui__field.bottom-right, .bottom-right.cui__field--icon {\n    border-top-left-radius: 0;\n    border-top-right-radius: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right, .bottom-right.cui__field--icon {\n        margin-left: -1px; } }\n    .cui__field.bottom-right.non-responsive, .bottom-right.non-responsive.cui__field--icon {\n      margin-left: -1px; }\n      .ie8 .cui__field.bottom-right.non-responsive, .ie8 .bottom-right.non-responsive.cui__field--icon {\n        margin-left: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.eighty, .bottom-right.eighty.cui__field--icon {\n        width: calc(80% + 1px); } }\n    .cui__field.bottom-right.eighty.non-responsive, .bottom-right.eighty.non-responsive.cui__field--icon {\n      width: calc(80% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.three-quarters, .bottom-right.three-quarters.cui__field--icon {\n        width: calc(75% + 1px); } }\n    .cui__field.bottom-right.three-quarters.non-responsive, .bottom-right.three-quarters.non-responsive.cui__field--icon {\n      width: calc(75% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.two-thirds, .bottom-right.two-thirds.cui__field--icon {\n        width: calc(66.66666% + 1px); } }\n    .cui__field.bottom-right.two-thirds.non-responsive, .bottom-right.two-thirds.non-responsive.cui__field--icon {\n      width: calc(66.66666% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.half, .bottom-right.half.cui__field--icon {\n        width: calc(50% + 1px); } }\n    .cui__field.bottom-right.half.non-responsive, .bottom-right.half.non-responsive.cui__field--icon {\n      width: calc(50% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.forty, .bottom-right.forty.cui__field--icon {\n        width: calc(40% + 1px); } }\n    .cui__field.bottom-right.forty.non-responsive, .bottom-right.forty.non-responsive.cui__field--icon {\n      width: calc(40% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.third, .bottom-right.third.cui__field--icon {\n        width: calc(33.33333% + 1px); } }\n    .cui__field.bottom-right.third.non-responsive, .bottom-right.third.non-responsive.cui__field--icon {\n      width: calc(33.33333% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.quarter, .bottom-right.quarter.cui__field--icon {\n        width: calc(25% + 1px); } }\n    .cui__field.bottom-right.quarter.non-responsive, .bottom-right.quarter.non-responsive.cui__field--icon {\n      width: calc(25% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.twenty, .bottom-right.twenty.cui__field--icon {\n        width: calc(20% + 1px); } }\n    .cui__field.bottom-right.twenty.non-responsive, .bottom-right.twenty.non-responsive.cui__field--icon {\n      width: calc(20% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right, .bottom-right.cui__field--icon {\n        border-bottom-left-radius: 0; } }\n    .cui__field.bottom-right.non-responsive, .bottom-right.non-responsive.cui__field--icon {\n      border-bottom-left-radius: 0; }\n  .cui__field.big, .big.cui__field--icon {\n    height: 60px; }\n  .cui__field.is-hidden, .is-hidden.cui__field--icon {\n    display: none; }\n  .cui__field:focus, .cui__field--icon:focus {\n    outline: none; }\n  .cui__field:hover, .cui__field--icon:hover {\n    border-color: #66aae0;\n    z-index: 10; }\n  .cui__field.is-focused, .is-focused.cui__field--icon {\n    border-color: rgba(26, 140, 220, 0.8);\n    box-shadow: 0 0 4px rgba(26, 140, 220, 0.6);\n    z-index: 20; }\n  .cui__field.is-error, .is-error.cui__field--icon {\n    background-color: #fff8f7;\n    border-color: #e6bebe;\n    box-shadow: none;\n    z-index: 5; }\n    .cui__field.is-error:hover, .is-error.cui__field--icon:hover {\n      border-color: #ef8b6f;\n      z-index: 10; }\n    .cui__field.is-error.is-focused, .is-error.is-focused.cui__field--icon {\n      border-color: #e63200;\n      box-shadow: 0 0 4px rgba(230, 55, 6, 0.4);\n      z-index: 20; }\n  .cui__field.is-warning, .is-warning.cui__field--icon {\n    background-color: #fffaf0;\n    border-color: #e6c88c;\n    box-shadow: none;\n    z-index: 5; }\n    .ie8 .cui__field.is-warning, .ie8 .is-warning.cui__field--icon, .cui__browser--ie8 .cui__field.is-warning, .cui__browser--ie8 .is-warning.cui__field--icon {\n      -ms-filter: \"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFAF0, endColorstr=#FFFFFAF0)\"; }\n    .cui__field.is-warning:hover, .is-warning.cui__field--icon:hover {\n      border-color: #e2af4a;\n      z-index: 10; }\n    .cui__field.is-warning.is-focused, .is-warning.is-focused.cui__field--icon {\n      border-color: #e2af4a;\n      box-shadow: 0 0 4px #e6c88c;\n      z-index: 20; }\n  .cui__field.is-disabled, .is-disabled.cui__field--icon {\n    background-color: #fafafa;\n    border-color: #cbcbcd; }\n    .cui__field.is-disabled:hover, .is-disabled.cui__field--icon:hover {\n      border-color: #cbcbcd; }\n  .cui__field.is-centered .cui__field__label, .is-centered.cui__field--icon .cui__field__label, .cui__field.is-centered .cui__field--icon__label, .is-centered.cui__field--icon .cui__field--icon__label {\n    padding: 0;\n    width: 100%; }\n  .cui__field.is-centered .cui__field--icon__input, .is-centered.cui__field--icon .cui__field--icon__input {\n    padding: 0 40px; }\n  .cui__field.is-centered .cui__field__input, .is-centered.cui__field--icon .cui__field__input, .cui__field.is-centered .cui__field--icon__input, .is-centered.cui__field--icon .cui__field--icon__input,\n  .cui__field.is-centered .cui__field__label, .is-centered.cui__field--icon .cui__field__label,\n  .cui__field.is-centered .cui__field--icon__label, .is-centered.cui__field--icon .cui__field--icon__label {\n    text-align: center; }\n  .cui__field.is-loading:after, .is-loading.cui__field--icon:after {\n    background-image: url(" + __webpack_require__(273) + ");\n    animation: spin .8s linear infinite;\n    display: inline-block;\n    font-size: 0;\n    height: 20px;\n    vertical-align: text-bottom;\n    width: 20px;\n    content: '';\n    margin-top: -10px;\n    position: absolute;\n    right: 15px;\n    top: 50%; }\n    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n      .cui__field.is-loading:after, .is-loading.cui__field--icon:after {\n        background-image: url(" + __webpack_require__(274) + ");\n        background-size: 20px 20px; } }\n    .ie8 .cui__field.is-loading:after, .ie8 .is-loading.cui__field--icon:after, .cui__browser--ie8 .cui__field.is-loading:after, .cui__browser--ie8 .is-loading.cui__field--icon:after, .ie9 .cui__field.is-loading:after, .ie9 .is-loading.cui__field--icon:after, .cui__browser--ie9 .cui__field.is-loading:after, .cui__browser--ie9 .is-loading.cui__field--icon:after {\n      font-size: rem2px(15px); }\n    .cui__field.is-loading:after:before, .is-loading.cui__field--icon:after:before {\n      content: url(" + __webpack_require__(273) + ");\n      display: none;\n      height: 0;\n      width: 0; }\n      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n        .cui__field.is-loading:after:before, .is-loading.cui__field--icon:after:before {\n          content: url(" + __webpack_require__(274) + "); } }\n\n.cui__field__label, .cui__field--icon__label {\n  font-size: 14px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #9e9ea0;\n  line-height: 50px;\n  padding: 0 20px;\n  position: absolute;\n  -webkit-transition: all .2s ease;\n  transition: all .2s ease; }\n  .big .cui__field__label, .big .cui__field--icon__label {\n    line-height: 60px; }\n  .big.is-filled .cui__field__label, .big.is-filled .cui__field--icon__label,\n  .big.is-error .cui__field__label,\n  .big.is-error .cui__field--icon__label,\n  .big.is-warning .cui__field__label,\n  .big.is-warning .cui__field--icon__label {\n    transform: translate(0, -11px); }\n  .is-filled .cui__field__label, .is-filled .cui__field--icon__label,\n  .is-error .cui__field__label,\n  .is-error .cui__field--icon__label,\n  .is-warning .cui__field__label,\n  .is-warning .cui__field--icon__label {\n    font-size: 11px;\n    font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n    font-weight: 400;\n    text-rendering: geometricPrecision;\n    -webkit-font-smoothing: antialiased;\n    transform: translate(0, -10px); }\n    .ie9 .is-filled .cui__field__label, .ie9 .is-filled .cui__field--icon__label,\n    .ie8 .is-filled .cui__field__label,\n    .ie8 .is-filled .cui__field--icon__label, .ie9\n    .is-error .cui__field__label, .ie9\n    .is-error .cui__field--icon__label,\n    .ie8\n    .is-error .cui__field__label,\n    .ie8\n    .is-error .cui__field--icon__label, .ie9\n    .is-warning .cui__field__label, .ie9\n    .is-warning .cui__field--icon__label,\n    .ie8\n    .is-warning .cui__field__label,\n    .ie8\n    .is-warning .cui__field--icon__label {\n      margin-top: -10px; }\n  .is-filled .cui__field__label, .is-filled .cui__field--icon__label {\n    color: #9e9ea0; }\n  .is-error .cui__field__label, .is-error .cui__field--icon__label {\n    color: #e63200; }\n  .is-warning .cui__field__label, .is-warning .cui__field--icon__label {\n    color: #ecb800; }\n  .is-disabled .cui__field__label, .is-disabled .cui__field--icon__label {\n    color: #cbcbcd; }\n  .ie9 .cui__field__label, .ie9 .cui__field--icon__label,\n  .ie8 .cui__field__label,\n  .ie8 .cui__field--icon__label {\n    z-index: 1; }\n\n.cui__field__input, .cui__field--icon__input {\n  font-size: 14px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  appearance: none;\n  background-color: transparent;\n  border: 0;\n  box-sizing: border-box;\n  color: #3c3c3e;\n  height: 50px;\n  outline: none;\n  padding: 0 20px;\n  position: absolute;\n  width: 100%; }\n  .ie9 .cui__field__input, .ie9 .cui__field--icon__input,\n  .ie8 .cui__field__input,\n  .ie8 .cui__field--icon__input {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=\");\n    position: relative;\n    top: 15px;\n    z-index: 10; }\n  .big .cui__field__input, .big .cui__field--icon__input {\n    height: 60px; }\n  .big.is-filled .cui__field__input, .big.is-filled .cui__field--icon__input,\n  .big.is-error .cui__field__input,\n  .big.is-error .cui__field--icon__input,\n  .big.is-warning .cui__field__input,\n  .big.is-warning .cui__field--icon__input {\n    height: 49px;\n    top: 11px; }\n  .is-filled .cui__field__input, .is-filled .cui__field--icon__input,\n  .is-error .cui__field__input,\n  .is-error .cui__field--icon__input,\n  .is-warning .cui__field__input,\n  .is-warning .cui__field--icon__input {\n    height: 45px;\n    top: 8px; }\n  .is-disabled .cui__field__input, .is-disabled .cui__field--icon__input {\n    color: #cbcbcd; }\n  .safari .cui__field__input, .safari .cui__field--icon__input,\n  .ios .cui__field__input,\n  .ios .cui__field--icon__input {\n    -webkit-transform: translate3d(0, 0, 0); }\n\n.cui__field--icon__label,\n.cui__field--icon__input {\n  padding-left: 42px; }\n\n.cui__field--icon__icon {\n  display: block;\n  height: 20px;\n  margin: 15px 0 0 12px;\n  position: absolute;\n  width: 20px; }\n  .big .cui__field--icon__icon {\n    margin-top: 20px; }\n\n.cui__field--icon__placeholder {\n  background: #cbcbcd;\n  display: block;\n  height: 20px;\n  width: 20px; }\n  .is-focused .cui__field--icon__placeholder {\n    background: #0074c8; }\n  .is-error .cui__field--icon__placeholder {\n    background: #e6bebe; }\n  .is-warning .cui__field--icon__placeholder {\n    background: #e6c88c; }\n\n.cui__fieldset {\n  padding-bottom: 25px;\n  position: relative; }\n  .cui__fieldset::after {\n    clear: both;\n    content: '';\n    display: block; }\n", ""]);
+	exports.push([module.id, "@keyframes spin {\n  to {\n    transform: rotate(1turn); } }\n\n/*******************************************************************************\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie { // Targets all IE browsers\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie(8) { // Targets only IE 8\n        padding-top: 22px;\n    }\n}\n\n.some-css-selector1,\n.some-css-selector2 {\n    padding: 20px;\n\n    @include respond-to-ie((8,9)) { // Targets both IE 8 and IE 9\n        padding-top: 22px;\n    }\n}\n*******************************************************************************/\n.cui__field, .cui__field--icon {\n  border: 1px solid #cbcbcd;\n  border-radius: 5px;\n  box-sizing: border-box;\n  clear: both;\n  display: block;\n  height: 51px;\n  margin-bottom: -1px;\n  position: relative;\n  text-align: left;\n  -webkit-transition: all .2s ease;\n  transition: all .2s ease; }\n  .cui__field.square, .square.cui__field--icon {\n    border-radius: 0; }\n  @media screen and (min-width: 569px) {\n    .cui__field.eighty, .eighty.cui__field--icon {\n      width: 80%;\n      clear: none;\n      float: left; } }\n  .cui__field.eighty.non-responsive, .eighty.non-responsive.cui__field--icon {\n    width: 80%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.three-quarters, .three-quarters.cui__field--icon {\n      width: 75%;\n      clear: none;\n      float: left; } }\n  .cui__field.three-quarters.non-responsive, .three-quarters.non-responsive.cui__field--icon {\n    width: 75%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.two-thirds, .two-thirds.cui__field--icon {\n      width: 66.66666%;\n      clear: none;\n      float: left; } }\n  .cui__field.two-thirds.non-responsive, .two-thirds.non-responsive.cui__field--icon {\n    width: 66.66666%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.half, .half.cui__field--icon {\n      width: 50%;\n      clear: none;\n      float: left; } }\n  .cui__field.half.non-responsive, .half.non-responsive.cui__field--icon {\n    width: 50%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.forty, .forty.cui__field--icon {\n      width: 40%;\n      clear: none;\n      float: left; } }\n  .cui__field.forty.non-responsive, .forty.non-responsive.cui__field--icon {\n    width: 40%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.third, .third.cui__field--icon {\n      width: 33.33333%;\n      clear: none;\n      float: left; } }\n  .cui__field.third.non-responsive, .third.non-responsive.cui__field--icon {\n    width: 33.33333%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.quarter, .quarter.cui__field--icon {\n      width: 25%;\n      clear: none;\n      float: left; } }\n  .cui__field.quarter.non-responsive, .quarter.non-responsive.cui__field--icon {\n    width: 25%;\n    clear: none;\n    float: left; }\n  @media screen and (min-width: 569px) {\n    .cui__field.twenty, .twenty.cui__field--icon {\n      width: 20%;\n      clear: none;\n      float: left; } }\n  .cui__field.twenty.non-responsive, .twenty.non-responsive.cui__field--icon {\n    width: 20%;\n    clear: none;\n    float: left; }\n  .cui__field.left, .left.cui__field--icon {\n    border-bottom-right-radius: 0;\n    border-top-right-radius: 0; }\n  .cui__field.center, .center.cui__field--icon {\n    border-radius: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.center, .center.cui__field--icon {\n        margin-left: -1px; } }\n    .cui__field.center.non-responsive, .center.non-responsive.cui__field--icon {\n      margin-left: -1px; }\n      .ie8 .cui__field.center.non-responsive, .ie8 .center.non-responsive.cui__field--icon {\n        margin-left: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.eighty, .center.eighty.cui__field--icon {\n        width: calc(80% + 1px); } }\n    .cui__field.center.eighty.non-responsive, .center.eighty.non-responsive.cui__field--icon {\n      width: calc(80% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.three-quarters, .center.three-quarters.cui__field--icon {\n        width: calc(75% + 1px); } }\n    .cui__field.center.three-quarters.non-responsive, .center.three-quarters.non-responsive.cui__field--icon {\n      width: calc(75% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.two-thirds, .center.two-thirds.cui__field--icon {\n        width: calc(66.66666% + 1px); } }\n    .cui__field.center.two-thirds.non-responsive, .center.two-thirds.non-responsive.cui__field--icon {\n      width: calc(66.66666% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.half, .center.half.cui__field--icon {\n        width: calc(50% + 1px); } }\n    .cui__field.center.half.non-responsive, .center.half.non-responsive.cui__field--icon {\n      width: calc(50% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.forty, .center.forty.cui__field--icon {\n        width: calc(40% + 1px); } }\n    .cui__field.center.forty.non-responsive, .center.forty.non-responsive.cui__field--icon {\n      width: calc(40% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.third, .center.third.cui__field--icon {\n        width: calc(33.33333% + 1px); } }\n    .cui__field.center.third.non-responsive, .center.third.non-responsive.cui__field--icon {\n      width: calc(33.33333% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.quarter, .center.quarter.cui__field--icon {\n        width: calc(25% + 1px); } }\n    .cui__field.center.quarter.non-responsive, .center.quarter.non-responsive.cui__field--icon {\n      width: calc(25% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.center.twenty, .center.twenty.cui__field--icon {\n        width: calc(20% + 1px); } }\n    .cui__field.center.twenty.non-responsive, .center.twenty.non-responsive.cui__field--icon {\n      width: calc(20% + 1px); }\n    .cui__field.center::after, .center.cui__field--icon::after {\n      clear: both;\n      content: '';\n      display: block; }\n  .cui__field.right, .right.cui__field--icon {\n    border-bottom-left-radius: 0;\n    border-top-left-radius: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.right, .right.cui__field--icon {\n        margin-left: -1px; } }\n    .cui__field.right.non-responsive, .right.non-responsive.cui__field--icon {\n      margin-left: -1px; }\n      .ie8 .cui__field.right.non-responsive, .ie8 .right.non-responsive.cui__field--icon {\n        margin-left: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.eighty, .right.eighty.cui__field--icon {\n        width: calc(80% + 1px); } }\n    .cui__field.right.eighty.non-responsive, .right.eighty.non-responsive.cui__field--icon {\n      width: calc(80% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.three-quarters, .right.three-quarters.cui__field--icon {\n        width: calc(75% + 1px); } }\n    .cui__field.right.three-quarters.non-responsive, .right.three-quarters.non-responsive.cui__field--icon {\n      width: calc(75% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.two-thirds, .right.two-thirds.cui__field--icon {\n        width: calc(66.66666% + 1px); } }\n    .cui__field.right.two-thirds.non-responsive, .right.two-thirds.non-responsive.cui__field--icon {\n      width: calc(66.66666% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.half, .right.half.cui__field--icon {\n        width: calc(50% + 1px); } }\n    .cui__field.right.half.non-responsive, .right.half.non-responsive.cui__field--icon {\n      width: calc(50% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.forty, .right.forty.cui__field--icon {\n        width: calc(40% + 1px); } }\n    .cui__field.right.forty.non-responsive, .right.forty.non-responsive.cui__field--icon {\n      width: calc(40% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.third, .right.third.cui__field--icon {\n        width: calc(33.33333% + 1px); } }\n    .cui__field.right.third.non-responsive, .right.third.non-responsive.cui__field--icon {\n      width: calc(33.33333% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.quarter, .right.quarter.cui__field--icon {\n        width: calc(25% + 1px); } }\n    .cui__field.right.quarter.non-responsive, .right.quarter.non-responsive.cui__field--icon {\n      width: calc(25% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.right.twenty, .right.twenty.cui__field--icon {\n        width: calc(20% + 1px); } }\n    .cui__field.right.twenty.non-responsive, .right.twenty.non-responsive.cui__field--icon {\n      width: calc(20% + 1px); }\n    .cui__field.right::after, .right.cui__field--icon::after {\n      clear: both;\n      content: '';\n      display: block; }\n  .cui__field.top, .top.cui__field--icon {\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0; }\n  .cui__field.top-left, .top-left.cui__field--icon {\n    border-bottom-left-radius: 0;\n    border-bottom-right-radius: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-left, .top-left.cui__field--icon {\n        border-top-right-radius: 0; } }\n    .cui__field.top-left.non-responsive, .top-left.non-responsive.cui__field--icon {\n      border-top-right-radius: 0; }\n  .cui__field.top-right, .top-right.cui__field--icon {\n    border-radius: 0;\n    clear: right; }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right, .top-right.cui__field--icon {\n        margin-left: -1px; } }\n    .cui__field.top-right.non-responsive, .top-right.non-responsive.cui__field--icon {\n      margin-left: -1px; }\n      .ie8 .cui__field.top-right.non-responsive, .ie8 .top-right.non-responsive.cui__field--icon {\n        margin-left: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.eighty, .top-right.eighty.cui__field--icon {\n        width: calc(80% + 1px); } }\n    .cui__field.top-right.eighty.non-responsive, .top-right.eighty.non-responsive.cui__field--icon {\n      width: calc(80% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.three-quarters, .top-right.three-quarters.cui__field--icon {\n        width: calc(75% + 1px); } }\n    .cui__field.top-right.three-quarters.non-responsive, .top-right.three-quarters.non-responsive.cui__field--icon {\n      width: calc(75% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.two-thirds, .top-right.two-thirds.cui__field--icon {\n        width: calc(66.66666% + 1px); } }\n    .cui__field.top-right.two-thirds.non-responsive, .top-right.two-thirds.non-responsive.cui__field--icon {\n      width: calc(66.66666% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.half, .top-right.half.cui__field--icon {\n        width: calc(50% + 1px); } }\n    .cui__field.top-right.half.non-responsive, .top-right.half.non-responsive.cui__field--icon {\n      width: calc(50% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.forty, .top-right.forty.cui__field--icon {\n        width: calc(40% + 1px); } }\n    .cui__field.top-right.forty.non-responsive, .top-right.forty.non-responsive.cui__field--icon {\n      width: calc(40% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.third, .top-right.third.cui__field--icon {\n        width: calc(33.33333% + 1px); } }\n    .cui__field.top-right.third.non-responsive, .top-right.third.non-responsive.cui__field--icon {\n      width: calc(33.33333% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.quarter, .top-right.quarter.cui__field--icon {\n        width: calc(25% + 1px); } }\n    .cui__field.top-right.quarter.non-responsive, .top-right.quarter.non-responsive.cui__field--icon {\n      width: calc(25% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right.twenty, .top-right.twenty.cui__field--icon {\n        width: calc(20% + 1px); } }\n    .cui__field.top-right.twenty.non-responsive, .top-right.twenty.non-responsive.cui__field--icon {\n      width: calc(20% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.top-right, .top-right.cui__field--icon {\n        border-top-right-radius: 5px; } }\n    .cui__field.top-right.non-responsive, .top-right.non-responsive.cui__field--icon {\n      border-top-right-radius: 5px; }\n  .cui__field.bottom, .bottom.cui__field--icon {\n    border-top-left-radius: 0;\n    border-top-right-radius: 0; }\n  .cui__field.bottom-left, .bottom-left.cui__field--icon {\n    border-radius: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-left, .bottom-left.cui__field--icon {\n        border-bottom-left-radius: 5px; } }\n    .cui__field.bottom-left.non-responsive, .bottom-left.non-responsive.cui__field--icon {\n      border-bottom-left-radius: 5px; }\n  .cui__field.bottom-right, .bottom-right.cui__field--icon {\n    border-top-left-radius: 0;\n    border-top-right-radius: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right, .bottom-right.cui__field--icon {\n        margin-left: -1px; } }\n    .cui__field.bottom-right.non-responsive, .bottom-right.non-responsive.cui__field--icon {\n      margin-left: -1px; }\n      .ie8 .cui__field.bottom-right.non-responsive, .ie8 .bottom-right.non-responsive.cui__field--icon {\n        margin-left: 0; }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.eighty, .bottom-right.eighty.cui__field--icon {\n        width: calc(80% + 1px); } }\n    .cui__field.bottom-right.eighty.non-responsive, .bottom-right.eighty.non-responsive.cui__field--icon {\n      width: calc(80% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.three-quarters, .bottom-right.three-quarters.cui__field--icon {\n        width: calc(75% + 1px); } }\n    .cui__field.bottom-right.three-quarters.non-responsive, .bottom-right.three-quarters.non-responsive.cui__field--icon {\n      width: calc(75% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.two-thirds, .bottom-right.two-thirds.cui__field--icon {\n        width: calc(66.66666% + 1px); } }\n    .cui__field.bottom-right.two-thirds.non-responsive, .bottom-right.two-thirds.non-responsive.cui__field--icon {\n      width: calc(66.66666% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.half, .bottom-right.half.cui__field--icon {\n        width: calc(50% + 1px); } }\n    .cui__field.bottom-right.half.non-responsive, .bottom-right.half.non-responsive.cui__field--icon {\n      width: calc(50% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.forty, .bottom-right.forty.cui__field--icon {\n        width: calc(40% + 1px); } }\n    .cui__field.bottom-right.forty.non-responsive, .bottom-right.forty.non-responsive.cui__field--icon {\n      width: calc(40% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.third, .bottom-right.third.cui__field--icon {\n        width: calc(33.33333% + 1px); } }\n    .cui__field.bottom-right.third.non-responsive, .bottom-right.third.non-responsive.cui__field--icon {\n      width: calc(33.33333% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.quarter, .bottom-right.quarter.cui__field--icon {\n        width: calc(25% + 1px); } }\n    .cui__field.bottom-right.quarter.non-responsive, .bottom-right.quarter.non-responsive.cui__field--icon {\n      width: calc(25% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right.twenty, .bottom-right.twenty.cui__field--icon {\n        width: calc(20% + 1px); } }\n    .cui__field.bottom-right.twenty.non-responsive, .bottom-right.twenty.non-responsive.cui__field--icon {\n      width: calc(20% + 1px); }\n    @media screen and (min-width: 569px) {\n      .cui__field.bottom-right, .bottom-right.cui__field--icon {\n        border-bottom-left-radius: 0; } }\n    .cui__field.bottom-right.non-responsive, .bottom-right.non-responsive.cui__field--icon {\n      border-bottom-left-radius: 0; }\n  .cui__field.big, .big.cui__field--icon {\n    height: 60px; }\n  .cui__field.is-hidden, .is-hidden.cui__field--icon {\n    display: none; }\n  .cui__field:focus, .cui__field--icon:focus {\n    outline: none; }\n  .cui__field:hover, .cui__field--icon:hover {\n    border-color: #66aae0;\n    z-index: 10; }\n  .cui__field.is-focused, .is-focused.cui__field--icon {\n    border-color: rgba(26, 140, 220, 0.8);\n    box-shadow: 0 0 4px rgba(26, 140, 220, 0.6);\n    z-index: 20; }\n  .cui__field.is-error, .is-error.cui__field--icon {\n    background-color: #fff8f7;\n    border-color: #e6bebe;\n    box-shadow: none;\n    z-index: 5; }\n    .cui__field.is-error:hover, .is-error.cui__field--icon:hover {\n      border-color: #ef8b6f;\n      z-index: 10; }\n    .cui__field.is-error.is-focused, .is-error.is-focused.cui__field--icon {\n      border-color: #e63200;\n      box-shadow: 0 0 4px rgba(230, 55, 6, 0.4);\n      z-index: 20; }\n  .cui__field.is-warning, .is-warning.cui__field--icon {\n    background-color: #fffaf0;\n    border-color: #e6c88c;\n    box-shadow: none;\n    z-index: 5; }\n    .ie8 .cui__field.is-warning, .ie8 .is-warning.cui__field--icon, .cui__browser--ie8 .cui__field.is-warning, .cui__browser--ie8 .is-warning.cui__field--icon {\n      -ms-filter: \"progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFFFFAF0, endColorstr=#FFFFFAF0)\"; }\n    .cui__field.is-warning:hover, .is-warning.cui__field--icon:hover {\n      border-color: #e2af4a;\n      z-index: 10; }\n    .cui__field.is-warning.is-focused, .is-warning.is-focused.cui__field--icon {\n      border-color: #e2af4a;\n      box-shadow: 0 0 4px #e6c88c;\n      z-index: 20; }\n  .cui__field.is-disabled, .is-disabled.cui__field--icon {\n    background-color: #fafafa;\n    border-color: #cbcbcd; }\n    .cui__field.is-disabled:hover, .is-disabled.cui__field--icon:hover {\n      border-color: #cbcbcd; }\n  .cui__field.is-centered .cui__field__label, .is-centered.cui__field--icon .cui__field__label, .cui__field.is-centered .cui__field--icon__label, .is-centered.cui__field--icon .cui__field--icon__label {\n    padding: 0;\n    width: 100%; }\n  .cui__field.is-centered .cui__field--icon__input, .is-centered.cui__field--icon .cui__field--icon__input {\n    padding: 0 40px; }\n  .cui__field.is-centered .cui__field__input, .is-centered.cui__field--icon .cui__field__input, .cui__field.is-centered .cui__field--icon__input, .is-centered.cui__field--icon .cui__field--icon__input,\n  .cui__field.is-centered .cui__field__label, .is-centered.cui__field--icon .cui__field__label,\n  .cui__field.is-centered .cui__field--icon__label, .is-centered.cui__field--icon .cui__field--icon__label {\n    text-align: center; }\n  .cui__field.is-loading:after, .is-loading.cui__field--icon:after {\n    background-image: url(" + __webpack_require__(277) + ");\n    animation: spin .8s linear infinite;\n    display: inline-block;\n    font-size: 0;\n    height: 20px;\n    vertical-align: text-bottom;\n    width: 20px;\n    content: '';\n    margin-top: -10px;\n    position: absolute;\n    right: 15px;\n    top: 50%; }\n    @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n      .cui__field.is-loading:after, .is-loading.cui__field--icon:after {\n        background-image: url(" + __webpack_require__(278) + ");\n        background-size: 20px 20px; } }\n    .ie8 .cui__field.is-loading:after, .ie8 .is-loading.cui__field--icon:after, .cui__browser--ie8 .cui__field.is-loading:after, .cui__browser--ie8 .is-loading.cui__field--icon:after, .ie9 .cui__field.is-loading:after, .ie9 .is-loading.cui__field--icon:after, .cui__browser--ie9 .cui__field.is-loading:after, .cui__browser--ie9 .is-loading.cui__field--icon:after {\n      font-size: rem2px(15px); }\n    .cui__field.is-loading:after:before, .is-loading.cui__field--icon:after:before {\n      content: url(" + __webpack_require__(277) + ");\n      display: none;\n      height: 0;\n      width: 0; }\n      @media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (min--moz-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 1.3 / 1), only screen and (min-resolution: 125dpi), only screen and (min-resolution: 1.3dppx) {\n        .cui__field.is-loading:after:before, .is-loading.cui__field--icon:after:before {\n          content: url(" + __webpack_require__(278) + "); } }\n\n.cui__field__label, .cui__field--icon__label {\n  font-size: 14px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 400;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  color: #9e9ea0;\n  line-height: 50px;\n  padding: 0 20px;\n  position: absolute;\n  -webkit-transition: all .2s ease;\n  transition: all .2s ease; }\n  .big .cui__field__label, .big .cui__field--icon__label {\n    line-height: 60px; }\n  .big.is-filled .cui__field__label, .big.is-filled .cui__field--icon__label,\n  .big.is-error .cui__field__label,\n  .big.is-error .cui__field--icon__label,\n  .big.is-warning .cui__field__label,\n  .big.is-warning .cui__field--icon__label {\n    transform: translate(0, -11px); }\n  .is-filled .cui__field__label, .is-filled .cui__field--icon__label,\n  .is-error .cui__field__label,\n  .is-error .cui__field--icon__label,\n  .is-warning .cui__field__label,\n  .is-warning .cui__field--icon__label {\n    font-size: 11px;\n    font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n    font-weight: 400;\n    text-rendering: geometricPrecision;\n    -webkit-font-smoothing: antialiased;\n    transform: translate(0, -10px); }\n    .ie9 .is-filled .cui__field__label, .ie9 .is-filled .cui__field--icon__label,\n    .ie8 .is-filled .cui__field__label,\n    .ie8 .is-filled .cui__field--icon__label, .ie9\n    .is-error .cui__field__label, .ie9\n    .is-error .cui__field--icon__label,\n    .ie8\n    .is-error .cui__field__label,\n    .ie8\n    .is-error .cui__field--icon__label, .ie9\n    .is-warning .cui__field__label, .ie9\n    .is-warning .cui__field--icon__label,\n    .ie8\n    .is-warning .cui__field__label,\n    .ie8\n    .is-warning .cui__field--icon__label {\n      margin-top: -10px; }\n  .is-filled .cui__field__label, .is-filled .cui__field--icon__label {\n    color: #9e9ea0; }\n  .is-error .cui__field__label, .is-error .cui__field--icon__label {\n    color: #e63200; }\n  .is-warning .cui__field__label, .is-warning .cui__field--icon__label {\n    color: #ecb800; }\n  .is-disabled .cui__field__label, .is-disabled .cui__field--icon__label {\n    color: #cbcbcd; }\n  .ie9 .cui__field__label, .ie9 .cui__field--icon__label,\n  .ie8 .cui__field__label,\n  .ie8 .cui__field--icon__label {\n    z-index: 1; }\n\n.cui__field__input, .cui__field--icon__input {\n  font-size: 14px;\n  font-family: \"Open Sans\", \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  font-weight: 600;\n  text-rendering: geometricPrecision;\n  -webkit-font-smoothing: antialiased;\n  appearance: none;\n  background-color: transparent;\n  border: 0;\n  box-sizing: border-box;\n  color: #3c3c3e;\n  height: 50px;\n  outline: none;\n  padding: 0 20px;\n  position: absolute;\n  width: 100%; }\n  .ie9 .cui__field__input, .ie9 .cui__field--icon__input,\n  .ie8 .cui__field__input,\n  .ie8 .cui__field--icon__input {\n    background-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=\");\n    position: relative;\n    top: 15px;\n    z-index: 10; }\n  .big .cui__field__input, .big .cui__field--icon__input {\n    height: 60px; }\n  .big.is-filled .cui__field__input, .big.is-filled .cui__field--icon__input,\n  .big.is-error .cui__field__input,\n  .big.is-error .cui__field--icon__input,\n  .big.is-warning .cui__field__input,\n  .big.is-warning .cui__field--icon__input {\n    height: 49px;\n    top: 11px; }\n  .is-filled .cui__field__input, .is-filled .cui__field--icon__input,\n  .is-error .cui__field__input,\n  .is-error .cui__field--icon__input,\n  .is-warning .cui__field__input,\n  .is-warning .cui__field--icon__input {\n    height: 45px;\n    top: 8px; }\n  .is-disabled .cui__field__input, .is-disabled .cui__field--icon__input {\n    color: #cbcbcd; }\n  .safari .cui__field__input, .safari .cui__field--icon__input,\n  .ios .cui__field__input,\n  .ios .cui__field--icon__input {\n    -webkit-transform: translate3d(0, 0, 0); }\n\n.cui__field--icon__label,\n.cui__field--icon__input {\n  padding-left: 42px; }\n\n.cui__field--icon__icon {\n  display: block;\n  height: 20px;\n  margin: 15px 0 0 12px;\n  position: absolute;\n  width: 20px; }\n  .big .cui__field--icon__icon {\n    margin-top: 20px; }\n\n.cui__field--icon__placeholder {\n  background: #cbcbcd;\n  display: block;\n  height: 20px;\n  width: 20px; }\n  .is-focused .cui__field--icon__placeholder {\n    background: #0074c8; }\n  .is-error .cui__field--icon__placeholder {\n    background: #e6bebe; }\n  .is-warning .cui__field--icon__placeholder {\n    background: #e6c88c; }\n\n.cui__fieldset {\n  padding-bottom: 25px;\n  position: relative; }\n  .cui__fieldset::after {\n    clear: both;\n    content: '';\n    display: block; }\n", ""]);
 	
 	// exports
 	exports.locals = {
@@ -28974,13 +29199,13 @@
 	};
 
 /***/ },
-/* 290 */
+/* 294 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(291);
+	var content = __webpack_require__(295);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -29000,7 +29225,7 @@
 	}
 
 /***/ },
-/* 291 */
+/* 295 */
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -29017,7 +29242,7 @@
 	};
 
 /***/ },
-/* 292 */
+/* 296 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -29050,7 +29275,7 @@
 	};
 
 /***/ },
-/* 293 */
+/* 297 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29063,7 +29288,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Icon = __webpack_require__(294);
+	var _Icon = __webpack_require__(298);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
@@ -29085,7 +29310,7 @@
 	exports.default = MailIcon;
 
 /***/ },
-/* 294 */
+/* 298 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29103,7 +29328,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _validateSize = __webpack_require__(295);
+	var _validateSize = __webpack_require__(299);
 	
 	var _validateSize2 = _interopRequireDefault(_validateSize);
 	
@@ -29153,7 +29378,7 @@
 	};
 
 /***/ },
-/* 295 */
+/* 299 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29175,7 +29400,7 @@
 	};
 
 /***/ },
-/* 296 */
+/* 300 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29188,7 +29413,7 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Icon = __webpack_require__(294);
+	var _Icon = __webpack_require__(298);
 	
 	var _Icon2 = _interopRequireDefault(_Icon);
 	
@@ -29210,7 +29435,7 @@
 	exports.default = LockIcon;
 
 /***/ },
-/* 297 */
+/* 301 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29220,7 +29445,7 @@
 	});
 	exports.submitForm = submitForm;
 	
-	var _store = __webpack_require__(298);
+	var _store = __webpack_require__(302);
 	
 	var _store2 = _interopRequireDefault(_store);
 	
@@ -29245,7 +29470,7 @@
 	}
 
 /***/ },
-/* 298 */
+/* 302 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29258,7 +29483,7 @@
 	
 	var _reactRouterRedux = __webpack_require__(187);
 	
-	var _reducer = __webpack_require__(299);
+	var _reducer = __webpack_require__(303);
 	
 	var _reducer2 = _interopRequireDefault(_reducer);
 	
@@ -29281,7 +29506,7 @@
 	exports.default = createStoreWithMiddleware(reducers);
 
 /***/ },
-/* 299 */
+/* 303 */
 /***/ function(module, exports) {
 
 	'use strict';

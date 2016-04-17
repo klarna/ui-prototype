@@ -4,9 +4,10 @@ import Button from '@klarna/ui-react-components/components/Button'
 import styles from './styles.css'
 import BankID from '../illustrations/BankID'
 import { connect } from 'react-redux'
+import Dialog from '../Dialog/index'
 
 const OpenBankID = () => (
-  <main className={styles.main}>
+  <Dialog>
     <BankID />
     <PrimaryTitle blue>
       Open your<br />Mobilt BandID app
@@ -19,7 +20,7 @@ const OpenBankID = () => (
         Open Mobilt BankID
       </Button>
     </a>
-  </main>
+  </Dialog>
 )
 
 export default connect((store) => store.data)(OpenBankID)

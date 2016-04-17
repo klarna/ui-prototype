@@ -4,9 +4,10 @@ import Button from '@klarna/ui-react-components/components/Button'
 import styles from './styles.css'
 import Bank from '../illustrations/Bank'
 import LinkList from '../LinkList'
+import Dialog from '../Dialog/index'
 
 export default () => (
-  <main className={styles.main}>
+  <Dialog>
     <Bank />
     <PrimaryTitle blue>
       Choose what<br />bank account to connect
@@ -15,5 +16,5 @@ export default () => (
       This will be the default bank account for your payments with Klarna.
     </Paragraph>
     <LinkList href='#review' options={['Privatkonto 123456789', 'Lonekonto 123456789']} />
-  </main>
+  </Dialog>
 )

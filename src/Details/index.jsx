@@ -8,9 +8,10 @@ import Mail from '@klarna/ui-react-components/components/icons/Mail'
 import Lock from '@klarna/ui-react-components/components/icons/Lock'
 import { submitForm } from '../actions'
 import { connect } from 'react-redux'
+import Dialog from '../Dialog/index'
 
 const Details = ({ error }) => (
-  <main className={styles.main}>
+  <Dialog>
     <UserDetails />
     <PrimaryTitle blue>
       Please enter<br />your details below
@@ -29,7 +30,7 @@ const Details = ({ error }) => (
         Continue
       </Button>
     </form>
-  </main>
+  </Dialog>
 )
 
 export default connect((store) => store.data)(Details)

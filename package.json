@@ -13,7 +13,7 @@
   "license": "ISC",
   "devDependencies": {
     "@klarna/ui-illustrations": "git+ssh://git@stash.int.klarna.net:7999/bow/ui-illustrations.git#1.1.1",
-    "@klarna/ui-react-components": "git+ssh://git@stash.int.klarna.net:7999/bow/ui-react-components.git#0.2.4",
+    "@klarna/ui-react-components": "git+ssh://git@stash.int.klarna.net:7999/bow/ui-react-components.git#feature/gbl-30010-full-screen-dialogs",
     "babel-core": "^6.7.6",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.6.0",
