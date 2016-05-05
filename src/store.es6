@@ -14,6 +14,6 @@ const middleware = [
 //  raven
 ]
 
-const devTools = window.devToolsExtension ? window.devToolsExtension() : f => f
+const devTools = window.devToolsExtension ? window.devToolsExtension() : (f) => f
 
 export default createStore(reducers, compose(applyMiddleware(...middleware), devTools))

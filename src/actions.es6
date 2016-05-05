@@ -6,3 +6,16 @@ export function submitForm (formData) {
     payload: formData
   })
 }
+
+export function typeName (name) {
+  store.dispatch({
+    type: 'TYPE_NAME',
+    payload: name
+  })
+}
+
+export function add () {
+  store.dispatch({
+    type: 'ADD'
+  })
+}
