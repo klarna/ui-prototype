@@ -4,7 +4,7 @@ import AnimatedMenu from '@klarna/ui-react-components/components/AnimatedMenu'
 import { browserHistory } from 'react-router'
 
 const menuOptions = [
-  { key: '/home', label: 'Home' },
+  { key: '/', label: 'Home' },
   { key: '/faq', label: 'FAQ' },
   { key: '/archive', label: 'Archive' }
 ]

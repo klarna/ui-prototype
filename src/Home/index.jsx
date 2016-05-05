@@ -1,6 +1,6 @@
 import React from 'react'
 import { PrimaryTitle, Paragraph } from '@klarna/ui-react-components/components/Text'
-import Field from '@klarna/ui-react-components/components/Field'
+import Input from '@klarna/ui-react-components/components/uncontrolled/Input'
 import Button from '@klarna/ui-react-components/components/Button'
 import styles from './styles.css'
 import { submitForm } from '../actions'
@@ -14,7 +14,7 @@ const Home = ({ error }) => (
     </Paragraph>
     <form onSubmit={(e) => { e.preventDefault(); submitForm(e.target.name.value) }}>
       <fieldset className={styles.fieldset}>
-        <Field error={error} size='big' name='name' label='Name' />
+        <Input name='name' label='Name' />
       </fieldset>
       <Button>Send</Button>
     </form>

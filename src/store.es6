@@ -1,4 +1,4 @@
-import { combineReducers, createStore, applyMiddleware } from 'redux'
+import { combineReducers, compose, createStore, applyMiddleware } from 'redux'
 import { routerReducer } from 'react-router-redux'
 import reducer from './reducer'
 // import mouseflow from './middleware/mouseflow'
@@ -14,5 +14,6 @@ const middleware = [
 //  raven
 ]
 
-const createStoreWithMiddleware = applyMiddleware(...middleware)(createStore)
-export default createStoreWithMiddleware(reducers)
+const devTools = window.devToolsExtension ? window.devToolsExtension() : f => f
+
+export default createStore(reducers, compose(applyMiddleware(...middleware), devTools))
