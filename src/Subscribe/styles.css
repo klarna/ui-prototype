@@ -1,0 +1,22 @@
+.main {
+  text-align: center;
+}
+
+.dn {
+  width: 350px;
+  height: 400px;
+}
+
+.tooltip {
+  margin-top: 15px;
+}
+
+.link {
+  margin-left: 5px;
+}
+
+.fieldset {
+  border: 0;
+  margin: 0;
+  padding: 10px 0;
+}

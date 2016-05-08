@@ -11,9 +11,9 @@ export default () => (
       Open your<br />Mobilt BandID app
     </PrimaryTitle>
     <Paragraph>
-      We are about to fetch your bank account details so you don’t have to bother typing them.
+      Now we need to authorize payments from this account and you're done!
     </Paragraph>
-    <a href='/bank_accounts'>
+    <a href='/done'>
       <Button className={styles.button}>
         Open Mobilt BankID
       </Button>
