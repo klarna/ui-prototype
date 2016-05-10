@@ -5,19 +5,21 @@ import NotYou from '../illustrations/NotYou'
 import styles from './styles.css'
 
 export default () => (
-  <main className={styles.main}>
+  <main>
   	<NotYou />
     <PrimaryTitle color="blue">
     	Not you?
   	</PrimaryTitle>
     <Paragraph>
-      We recognize you based on previous use of this device, if this info os oncorrect or you don't want to be shown, click below.
+      We recognize you based on previous use of this device, if this info os oncorrect or you don&#39;t want to be shown, click below.
     </Paragraph>
     <Link color="blue">
-      YES
+      I&#39;M SURE
     </Link>
-    <Link color="grey">
-      CANCEL
-    </Link>
+    <span >
+      <Link className={styles.grey}>
+        CANCEL
+      </Link>
+    </span>
   </main>
 )
