@@ -16,10 +16,8 @@ export default () => (
     <Link color="blue">
       I&#39;M SURE
     </Link>
-    <span >
-      <Link className={styles.grey}>
-        CANCEL
-      </Link>
-    </span>
+    <Link className={styles.grey}>
+      CANCEL
+    </Link>
   </main>
 )
