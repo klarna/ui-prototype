@@ -8,21 +8,13 @@ import styles from './styles.css'
 import { connect } from 'react-redux'
 import SubscribeButton from '../../illustrations/Subscribe'
 
-const Subscribe = () => (
+export default () => (
   <main className={styles.main}>
     <img src='./img/dn.png' className={styles.dn}/>
     <div>
       <a href='/personal_number'>
         <SubscribeButton />
       </a>
-    </div>
-    <div>
-      <Paragraph className={styles.paragraph}>
-        Nordea ●●●●● 789
-        <Link href="#" className={styles.link}>
-          Change
-        </Link>
-      </Paragraph>
     </div>
     <div className={styles.tooltip + " cui__tooltip top border"} style={{backgroundColor: "white"}}>
       <div className={styles.user_name}>Hi Rasmus,</div>
@@ -36,5 +28,3 @@ const Subscribe = () => (
     </div>
   </main>
 )
-
-export default connect((store) => store.data)(Subscribe)
