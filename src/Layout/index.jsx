@@ -13,12 +13,6 @@ const Layout = ({ data, children, location }) => {
 
   return (
     <main className={styles.main}>
-      <AnimatedMenu
-        tabDisplay='static'
-        name='menu'
-        selected={location.pathname}
-        onChange={browserHistory.push}
-        options={menuOptions} />
       {children}
     </main>
   )
