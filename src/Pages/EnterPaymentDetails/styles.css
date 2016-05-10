@@ -1,0 +1,46 @@
+.personal_details, .creditcard_details {
+  text-align: left;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+.row {
+  padding: 20px;
+}
+.col {
+  padding: 0;
+  width: 49%;
+  display: inline-block;
+}
+.col > div {
+  padding: 20px;
+}
+.personal_details .row:not(:last-child), .creditcard_details .row {
+  border-bottom: 1px solid #cbcbcd;
+}
+.creditcard_details .col:not(:last-child) {
+  border-right: 1px solid #cbcbcd;
+}
+.personal_details svg, .creditcard_details svg {
+  float: left;
+  margin-right: 10px;
+}
+
+.field {
+  margin-left: 20px;
+}
+.field input {
+  font-size: 14px;
+  border: 0 solid transparent;
+  width: 80%;
+}
+.field input:focus {
+  outline: none;
+}
+
+.remember {
+  float: left;
+  margin-bottom: 40px;
+}

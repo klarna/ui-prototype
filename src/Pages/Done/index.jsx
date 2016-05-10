@@ -5,7 +5,7 @@ import Field from '@klarna/ui-react-components/components/Field'
 import Link from '@klarna/ui-react-components/components/Link'
 import Subtitle from '@klarna/ui-react-components/components/texts/Subtitle'
 import styles from './styles.css'
-import Done from '../illustrations/Done'
+import Done from '../../illustrations/Done'
 
 export default () => (
   <main className={styles.main}>

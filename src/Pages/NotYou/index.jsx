@@ -1,11 +1,13 @@
 import React from 'react'
 import { PrimaryTitle, Paragraph } from '@klarna/ui-react-components/components/Text'
 import Link from '@klarna/ui-react-components/components/Link'
-import NotYou from '../illustrations/NotYou'
+import CloseButton from '../../CloseButton'
+import NotYou from '../../illustrations/NotYou'
 import styles from './styles.css'
 
 export default () => (
   <main>
+    <CloseButton />
   	<NotYou />
     <PrimaryTitle color="blue">
     	Not you?
@@ -16,10 +18,8 @@ export default () => (
     <Link color="blue">
       I&#39;M SURE
     </Link>
-    <span >
-      <Link className={styles.grey}>
-        CANCEL
-      </Link>
-    </span>
+    <Link className={styles.grey}>
+      CANCEL
+    </Link>
   </main>
 )

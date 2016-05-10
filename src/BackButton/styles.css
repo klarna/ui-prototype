@@ -1,0 +1,15 @@
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  padding: 15px 30px;
+  font-size: 12px;
+}
+.arrow {
+  font-size: 30px;
+  font-family: Arial;
+  position: relative;
+  top: 3px;
+  right: 3px;
+}
