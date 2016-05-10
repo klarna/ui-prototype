@@ -1,0 +1,38 @@
+.main {
+  text-align: center;
+}
+
+.dn {
+  width: 350px;
+  height: 400px;
+}
+
+.tooltip {
+  /*margin-top: 15px;*/
+  padding: 14px 20px;
+}
+
+.link {
+  margin-left: 5px;
+}
+
+.fieldset {
+  border: 0;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.user_name {
+  display: inline;
+  font-weight: 600;
+  margin-right: 3px;
+}
+
+.preview_link {
+  color: #9e9ea0;
+  margin-top: 8px;
+}
+
+.paragraph {
+  padding-bottom: 8px;
+}
