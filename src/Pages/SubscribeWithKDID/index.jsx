@@ -6,15 +6,14 @@ import Preview, { PreviewTitle, PreviewLink } from '@klarna/ui-react-components/
 import { SecondaryTitle, Paragraph } from '@klarna/ui-react-components/components/Text'
 import styles from './styles.css'
 import { connect } from 'react-redux'
+import SubscribeButton from '../../illustrations/Subscribe'
 
 const Subscribe = () => (
   <main className={styles.main}>
     <img src='./img/dn.png' className={styles.dn}/>
     <div>
       <a href='/personal_number'>
-        <Button className={styles.button}>
-          Subscribe with Klarna Direkt
-        </Button>
+        <SubscribeButton />
       </a>
     </div>
     <div>
