@@ -1,6 +1,6 @@
 import Layout from './Layout'
 import Home from './Home'
-import FAQ from './FAQ'
+import Done from './Done'
 import Archive from './Archive'
 
 export default {
@@ -9,7 +9,7 @@ export default {
   indexRoute: { component: Home },
   childRoutes: [
     { path: 'home', component: Home },
-    { path: 'faq', component: FAQ },
+    { path: 'done', component: Done },
     { path: 'archive', component: Archive }
   ]
 }

@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 const Layout = ({ data, children, location }) => {
   const menuOptions = [
     { key: '/', label: `Home (${data.count})` },
-    { key: '/faq', label: 'FAQ' },
+    { key: '/Done', label: 'Done' },
     { key: '/archive', label: 'Archive' }
   ]
 
