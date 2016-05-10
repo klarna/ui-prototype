@@ -14,8 +14,8 @@ export default {
     { path: 'home', component: Home },
     { path: 'done', component: Done },
     { path: 'not-you', component: NotYou },
-    { path: 'subscribe-with-kdid', component: SubscribeWithKdid }
+    { path: 'subscribe-with-kdid', component: SubscribeWithKdid },
     { path: 'enter-payment-details', component: EnterPaymentDetails },
-    { path: 'connect-bank-account', component: ConnectBankAccount },
+    { path: 'connect-bank-account', component: ConnectBankAccount }
   ]
 }
