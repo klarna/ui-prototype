@@ -2,7 +2,7 @@ import Layout from './Layout'
 import Home from './Home'
 import Done from './Done'
 import NotYou from './NotYou'
-import Archive from './Archive'
+import EnterPaymentDetails from './EnterPaymentDetails'
 
 export default {
   path: '/',
@@ -12,6 +12,6 @@ export default {
     { path: 'home', component: Home },
     { path: 'done', component: Done },
     { path: 'not-you', component: NotYou },
-    { path: 'archive', component: Archive }
+    { path: 'enter-payment-details', component: EnterPaymentDetails },
   ]
 }
