@@ -1,8 +1,8 @@
 import Layout from './Layout'
 import Home from './Home'
-import Done from './Done'
-import NotYou from './NotYou'
-import EnterPaymentDetails from './EnterPaymentDetails'
+import Done from './Pages/Done'
+import NotYou from './Pages/NotYou'
+import EnterPaymentDetails from './Pages/EnterPaymentDetails'
 
 export default {
   path: '/',
