@@ -1,8 +1,17 @@
 .main {
+  margin-top: 50px;
 }
 
 .fieldset {
   border: 0;
   margin: 0;
   padding: 10px 0;
+}
+
+.done {
+  margin-top: 60px;
+}
+
+.link {
+  margin-left: 5px;
 }

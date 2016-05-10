@@ -3,13 +3,14 @@ import { PrimaryTitle, Paragraph } from '@klarna/ui-react-components/components/
 import Button from '@klarna/ui-react-components/components/Button'
 import Field from '@klarna/ui-react-components/components/Field'
 import Link from '@klarna/ui-react-components/components/Link'
+import Subtitle from '@klarna/ui-react-components/components/texts/Subtitle'
 import styles from './styles.css'
 import Done from '../illustrations/Done'
 
 export default () => (
   <main className={styles.main}>
     <Done />
-    <PrimaryTitle blue>
+    <PrimaryTitle color="blue">
       You're done!
     </PrimaryTitle>
     <Paragraph>
@@ -18,10 +19,10 @@ export default () => (
         rasmus@klarna.com
       </Link>
     </Paragraph>
-    <div className={styles.done}>
+    <Subtitle className={styles.done}>
       <Link href="/">
         CLOSE
       </Link>
-    </div>
+    </Subtitle>
   </main>
 )
