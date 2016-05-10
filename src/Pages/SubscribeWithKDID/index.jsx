@@ -18,7 +18,7 @@ const Subscribe = () => (
       </a>
     </div>
     <div>
-      <Paragraph>
+      <Paragraph className={styles.paragraph}>
         Nordea ●●●●● 789
         <Link href="#" className={styles.link}>
           Change
