@@ -3,7 +3,7 @@ import { PrimaryTitle, Paragraph } from '@klarna/ui-react-components/components/
 import Link from '@klarna/ui-react-components/components/Link'
 import Button from '@klarna/ui-react-components/components/Button'
 import Switch from '@klarna/ui-react-components/components/Switch'
-import CloseButton from '../../BackButton'
+import BackButton from '../../BackButton'
 import NotYou from '../../illustrations/NotYou'
 import styles from './styles.css'
 
@@ -13,7 +13,7 @@ import Phone from '@klarna/ui-react-components/components/icons/Phone'
 
 export default () => (
   <main>
-    <CloseButton />
+    <BackButton />
     <PrimaryTitle color="blue">
     	Enter your payment details
   	</PrimaryTitle>
