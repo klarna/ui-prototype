@@ -1,5 +1,8 @@
 .main {
-  margin: 40px auto 0 auto;
+  margin: 0 auto 0 auto;
+  padding: 40px;
   width: 100%;
   max-width: 600px;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
