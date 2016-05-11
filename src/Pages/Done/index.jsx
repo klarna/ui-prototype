@@ -11,7 +11,7 @@ export default () => (
   <main className={styles.main}>
     <Done />
     <PrimaryTitle color="blue">
-      You're done!
+      You&#39;re done!
     </PrimaryTitle>
     <Paragraph>
       An email with your purchase details<br /> will be sent to

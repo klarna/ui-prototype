@@ -9,6 +9,7 @@ import EnterPaymentDetails from './Pages/EnterPaymentDetails'
 import ConnectBankAccount from './Pages/ConnectBankAccount'
 import OpenBankIdAppAuthorize from './Pages/OpenBankIdAppAuthorize'
 import OpenBankIdAppAuthenticate from './Pages/OpenBankIdAppAuthenticate'
+import PNO from './Pages/PNO'
 
 export default {
   path: '/',
@@ -24,6 +25,7 @@ export default {
     { path: 'enter-payment-details', component: EnterPaymentDetails },
     { path: 'connect-bank-account', component: ConnectBankAccount },
     { path: 'open-bank-id-app-authorize', component: OpenBankIdAppAuthorize },
-    { path: 'open-bank-id-app-authenticate', component: OpenBankIdAppAuthenticate }
+    { path: 'open-bank-id-app-authenticate', component: OpenBankIdAppAuthenticate },
+    { path: 'pno', component: PNO }
   ]
 }

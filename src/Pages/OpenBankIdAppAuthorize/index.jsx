@@ -1,7 +1,6 @@
 import React from 'react'
 import { PrimaryTitle, Paragraph } from '@klarna/ui-react-components/components/Text'
 import Button from '@klarna/ui-react-components/components/Button'
-import Link from '@klarna/ui-react-components/components/Link'
 import CloseButton from '../../CloseButton'
 import BankId from '../../illustrations/BankId'
 import styles from './styles.css'
