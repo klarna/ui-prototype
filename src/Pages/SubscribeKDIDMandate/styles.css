@@ -8,7 +8,9 @@
 }
 
 .tooltip {
-  padding: 14px 20px;
+  background: white !important;
+  line-height: 20px !important;
+  padding: 15px 39px !important;
 }
 
 .link {
