@@ -3,7 +3,6 @@ import { PrimaryTitle, Paragraph } from '@klarna/ui-react-components/components/
 import Button from '@klarna/ui-react-components/components/Button'
 import Field from '@klarna/ui-react-components/components/Field'
 import Link from '@klarna/ui-react-components/components/Link'
-import Subtitle from '@klarna/ui-react-components/components/texts/Subtitle'
 import styles from './styles.css'
 import PNO from '../../illustrations/PNO'
 import CloseButton from '../../CloseButton'
@@ -21,12 +20,10 @@ export default () => (
         How it works
       </Link>
     </Paragraph>
-    <div className="cui__field is-centered">
-      <label className="cui__field__label">
-          Personal Number
-      </label>
-      <input className="cui__field__input" />
-    </div>
+    <Field
+      centered={true}
+      label="Personal Number"
+      big={true}/>
     <a href='/home'>
       <Button size='big' className={styles.button}>
         Continue
