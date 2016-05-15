@@ -15,7 +15,7 @@ export default () => (
     <Paragraph>
       Now we need to authorize payments from this account and you&#39;re done
     </Paragraph>
-    <a href='/personal_number'>
+    <a href='/done'>
       <Button className={styles.button}>
         Open Mobilt BankID
       </Button>

@@ -15,7 +15,7 @@ export default () => (
     <Paragraph>
       We just need to authenticate that it&#39;s really you!
     </Paragraph>
-    <a href='/personal_number'>
+    <a href='/done'>
       <Button className={styles.button}>
         Open Mobilt BankID
       </Button>
