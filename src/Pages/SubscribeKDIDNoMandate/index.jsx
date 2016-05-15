@@ -9,7 +9,7 @@ export default () => (
   <main className={styles.main}>
     <img src='./img/dn.png' className={styles.dn}/>
     <div>
-      <a href='/personal_number'>
+      <a href='/connect-bank-account'>
         <SubscribeButton />
       </a>
     </div>

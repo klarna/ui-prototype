@@ -1,0 +1,18 @@
+.banks {
+  text-align: left;
+  margin-bottom: 30px;
+}
+.banks > div::after {
+  content: '›';
+  font-size: 30px;
+  float: right;
+  position: relative;
+  bottom: 28px;
+  font-weight: 100;
+}
+.banks > div:first-child {
+  border-top: 0 solid transparent;
+}
+.banks > div:last-child {
+  border-bottom: 0 solid transparent;
+}

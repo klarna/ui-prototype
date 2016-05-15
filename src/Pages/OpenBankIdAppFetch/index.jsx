@@ -13,7 +13,7 @@ export default () => (
       Open your Mobilt BankID app
     </PrimaryTitle>
     <Paragraph>
-      Now we need to authorize payments from this account and you&#39;re done
+      We are about to fetch your bank account details so you don't have to bother typing them.
     </Paragraph>
     <a href='/done'>
       <Button className={styles.button}>

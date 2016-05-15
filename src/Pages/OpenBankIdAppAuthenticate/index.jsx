@@ -1,7 +1,6 @@
 import React from 'react'
 import { PrimaryTitle, Paragraph } from '@klarna/ui-react-components/components/Text'
 import Button from '@klarna/ui-react-components/components/Button'
-import Link from '@klarna/ui-react-components/components/Link'
 import CloseButton from '../../CloseButton'
 import BankId from '../../illustrations/BankId'
 import styles from './styles.css'
@@ -16,7 +15,7 @@ export default () => (
     <Paragraph>
       We just need to authenticate that it&#39;s really you!
     </Paragraph>
-    <a href='/personal_number'>
+    <a href='/done'>
       <Button className={styles.button}>
         Open Mobilt BankID
       </Button>

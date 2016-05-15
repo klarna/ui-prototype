@@ -5,26 +5,17 @@ import Field from '@klarna/ui-react-components/components/Field'
 import Link from '@klarna/ui-react-components/components/Link'
 import Subtitle from '@klarna/ui-react-components/components/texts/Subtitle'
 import styles from './styles.css'
-import Done from '../../illustrations/Done'
-import CloseButton from '../../CloseButton'
 
 export default () => (
   <main className={styles.main}>
-    <CloseButton />
-    <Done />
-    <PrimaryTitle color="blue">
-      You&#39;re done!
-    </PrimaryTitle>
-    <Paragraph>
-      An email with your purchase details<br /> will be sent to
-      <Link className={styles.link}>
-        rasmus@klarna.com
-      </Link>
-    </Paragraph>
-    <Subtitle className={styles.done}>
-      <Link href="/flows">
-        CLOSE
-      </Link>
-    </Subtitle>
+    <Link href='subscribe-kdid-mandate'>
+      Kdid + Mandate
+    </Link><br />
+    <Link href='subscribe-kdid-no-mandate'>
+      Kdid + No Mandate
+    </Link><br />
+    <Link href='subscribe-kdid-no-mandate'>
+      Not you
+    </Link>
   </main>
 )
