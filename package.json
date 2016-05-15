@@ -5,7 +5,8 @@
   "repository": "https://github.com/klarna/ui-prototype",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --history-api-fallback"
+    "start": "webpack-dev-server --inline --history-api-fallback",
+    "build": "NODE_ENV=production webpack --bail --config webpack.prod.config.js"
   },
   "keywords": [],
   "author": "ui-* team",
