@@ -7,6 +7,7 @@ import SubscribeKdidMandate from './Pages/SubscribeKdidMandate'
 import SubscribeKdidNoMandate from './Pages/SubscribeKdidNoMandate'
 import SubscribeNoKdidNoMandate from './Pages/SubscribeNoKdidNoMandate'
 import EnterPaymentDetails from './Pages/EnterPaymentDetails'
+import ChoosePaymentMethod from './Pages/ChoosePaymentMethod'
 import ConnectBankAccount from './Pages/ConnectBankAccount'
 import ChooseBankAccount from './Pages/ChooseBankAccount'
 import OpenBankIdAppAuthorize from './Pages/OpenBankIdAppAuthorize'
@@ -27,6 +28,7 @@ export default {
     { path: 'subscribe-kdid-no-mandate', component: SubscribeKdidNoMandate },
     { path: 'subscribe-no-kdid-no-mandate', component: SubscribeNoKdidNoMandate },
     { path: 'enter-payment-details', component: EnterPaymentDetails },
+    { path: 'choose-payment-method', component: ChoosePaymentMethod },
     { path: 'connect-bank-account', component: ConnectBankAccount },
     { path: 'choose-bank-account', component: ChooseBankAccount },
     { path: 'open-bank-id-app-authorize', component: OpenBankIdAppAuthorize },
