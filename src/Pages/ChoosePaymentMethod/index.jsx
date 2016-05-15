@@ -3,7 +3,6 @@ import { PrimaryTitle, Paragraph } from '@klarna/ui-react-components/components/
 import Selector from '@klarna/ui-react-components/components/Selector'
 import Link from '@klarna/ui-react-components/components/Link'
 import CloseButton from '../../CloseButton'
-import NotYou from '../../illustrations/NotYou'
 import styles from './styles.css'
 
 import ChoosePM from '../../illustrations/ChoosePM'
@@ -19,7 +18,7 @@ export default () => (
     	Choose a payment method
   	</PrimaryTitle>
     <Selector className={styles.payment_methods}
-      selected={0}
+      selected={1}
       onChange={onChoose}
       data={[
         {"id":1,"label":"Nordea •••••• 678"},
