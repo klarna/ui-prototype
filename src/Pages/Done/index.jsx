@@ -6,9 +6,11 @@ import Link from '@klarna/ui-react-components/components/Link'
 import Subtitle from '@klarna/ui-react-components/components/texts/Subtitle'
 import styles from './styles.css'
 import Done from '../../illustrations/Done'
+import CloseButton from '../../CloseButton'
 
 export default () => (
   <main className={styles.main}>
+    <CloseButton />
     <Done />
     <PrimaryTitle color="blue">
       You&#39;re done!
@@ -20,7 +22,7 @@ export default () => (
       </Link>
     </Paragraph>
     <Subtitle className={styles.done}>
-      <Link href="/">
+      <Link href="/flows">
         CLOSE
       </Link>
     </Subtitle>
