@@ -1,0 +1,25 @@
+.preview {
+  text-align: left;
+  position: relative;
+  margin-top: 40px;
+  border-radius: 0;
+  border-left: 0 solid transparent;
+  border-right: 0 solid transparent;
+}
+.preview strong, .preview_noborder strong {
+  color: #3c3c3e;
+}
+.preview_noborder {
+  text-align: left;
+  border: 0 solid transparent;
+}
+.preview, .preview_noborder > * {
+  color: #999;
+}
+.change {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -10px;
+}
