@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles.css'
-import AnimatedMenu from '@klarna/ui-react-components/components/AnimatedMenu'
+import * as Menu from '@klarna/ui/Menu'
 import { browserHistory } from 'react-router'
 import { connect } from 'react-redux'
 
@@ -13,12 +13,13 @@ const Layout = ({ data, children, location }) => {
 
   return (
     <main className={styles.main}>
-      <AnimatedMenu
+      <Menu.Tab
         tabDisplay='static'
         name='menu'
-        selected={location.pathname}
+        value={location.pathname}
         onChange={browserHistory.push}
-        options={menuOptions} />
+        options={menuOptions}
+      />
       {children}
     </main>
   )

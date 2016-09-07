@@ -1,25 +1,33 @@
 import React, { PropTypes } from 'react'
-import { PrimaryTitle, Paragraph } from '@klarna/ui-react-components/components/Text'
-import Input from '@klarna/ui-react-components/components/uncontrolled/Input'
-import Button from '@klarna/ui-react-components/components/Button'
+import * as Title from '@klarna/ui/Title'
+import * as Paragraph from '@klarna/ui/Paragraph'
+import UncontrolledInput from '@klarna/ui/uncontrolled/Input'
+import Fieldset from '@klarna/ui/Fieldset'
+import * as Button from '@klarna/ui/Button'
 import styles from './styles.css'
 import { submitForm, typeName, add } from '../actions'
 import { connect } from 'react-redux'
 
 const Home = ({ name, error }, { store }) => (
   <main className={styles.main}>
-    <PrimaryTitle>Hello {name}!</PrimaryTitle>
+    <Title.Primary>Hello {name}!</Title.Primary>
     <form onSubmit={(e) => { e.preventDefault(); submitForm(e.target.name.value) }}>
-      <fieldset className={styles.fieldset}>
-        <Input onFocus={() => {}}
-          onBlur={() => {}} onChange={(e) => typeName(e.target.value)} name='name' label={error || 'Name'} error={!!error} />
-      </fieldset>
+      <Fieldset className={styles.fieldset}>
+        <UncontrolledInput
+          onFocus={() => {}}
+          onBlur={() => {}}
+          onChange={(e) => typeName(e.target.value)}
+          name='name'
+          label={error || 'Name'}
+          error={!!error}
+        />
+      </Fieldset>
     </form>
 
-    <Button onClick={add}>Add</Button>
-    <Paragraph>
+    <Button.Primary onClick={add}>Add</Button.Primary>
+    <Paragraph.Primary>
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-    </Paragraph>
+    </Paragraph.Primary>
   </main>
 )
 
