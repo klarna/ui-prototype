@@ -1,6 +1,6 @@
-# Klarna prototype
+# Klarna UI prototype
 
-This is a repo to quickly start prototyping something.
+This is a repo to quickly start a project or prototype.
 
 It includes all ui-* projects you need and a base setup to keep going.
 
