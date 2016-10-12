@@ -1,7 +1,10 @@
-import style from './index.css'
+import './index.css'
 
-const div = document.createElement('div')
-div.innerHTML = '<h1>Hello World</h1>'
-div.className = style.component
+import React from 'react'
+import { render } from 'react-dom'
+import Home from './Home'
 
-document.getElementById('ui-prototype').appendChild(div)
+render(
+  <Home />
+  , document.getElementById('ui-prototype')
+)
